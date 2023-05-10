@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>123</li>
+    </ul>
+
+    <script>
+        //1. 創建節點
+        var li = document.createElement('li');
+        //2. 添加節點 node.appendChild(child) 將一個節點追加到父節點中 成為最後一個子節點 類似數組中的push
+        var ul = document.querySelector('ul');
+        ul.appendChild(li);
+        //3. 添加節點 node.insertBefore(child,指定元素) 
+        var lili = document.createElement('li')
+        ul.insertBefore(lili, ul.children[0])
+        //4. 想要在頁面中添加一個新元素，1.創建元素 2.添加元素
+
+    </script>
+</body>
+</html>

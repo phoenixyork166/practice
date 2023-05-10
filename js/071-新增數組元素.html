@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 新增數組元素 透過修改length長度
+        var array = ['red', 'green', 'blue']
+        console.log(array.length);
+        array.length = 5; //把數組長度修改為5， 裡面應該會有5個元素
+        console.log(array); //['red', 'green', 'blue', empty × 2]
+        console.log(array[3]) //undefined
+
+        //2. 新增數組元素 修改索引號 追加數組元素
+        var array1 = ['red', 'green', 'blue']
+        array1[3] = 'pink';
+        console.log(array1); //(4) ['red', 'green', 'blue', 'pink']
+        array1[0] = 'yellow'; //替換數組元素
+        console.log(array1); //['yellow', 'green', 'blue', 'pink']
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

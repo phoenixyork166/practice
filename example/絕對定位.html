@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>絕對定位</title>
+    <style>
+        .grand {
+            /* 若祖先元素有定位，則以最近一級的有定位祖先元素為參考點移動位置。 */
+            /* position: relative; */
+            width: 800px;
+            height: 800px;
+            background-color: blanchedalmond;
+        }
+
+        .father {
+            /* 為父元素添加定位後，子元素的絕對定位則以父元素為準 */
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+
+        .son {
+            /* 為元素設置絕對定位，在沒有父級元素或者父級元素沒有定位的情況下，會以瀏覽器為准定位。 */
+
+            position: absolute;
+            bottom: 100px;
+            left: 0px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grand">
+        <div class="father">
+            <div class="son"></div>
+        </div>
+    </div>
+</body>
+
+</html>

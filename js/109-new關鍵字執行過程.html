@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //new關鍵字執行過程
+        //1. new構造函數可以再內存中創建一個空的對象
+        //2. this 就會指向剛才創建的空對象
+        //3. 執行構造函數裡面的代碼 給空對象添加屬性和對象
+        //4. 返回對象
+        function Pig(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(song){
+                console.log(song);
+            }
+
+        }
+        var mai = new Pig('mai', 1, 'male')
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

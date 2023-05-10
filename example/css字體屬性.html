@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字體屬性</title>
+    <style>
+        h3 {
+            /* 設置字體樣式 */
+            font-family: "Arial";
+            /* 設置字體大小 */
+            font-size: 24px;
+            /* 設置字體粗細 */
+            font-weight: 400;
+            /* 設置字體風格 */
+            font-style: italic;
+        }
+
+        p {
+            font-family: "標楷體", Arial, "宋體";
+        }
+
+        body {
+            font-size: 20px;
+        }
+
+        .bold {
+            /* font weight後的數值不需要加px */
+            font-weight: 700;
+        }
+
+        em {
+            /* 把傾斜的字體變正常字體 */
+            font-style: normal;
+        }
+
+        .複合屬性 {
+            /* 複合字體屬性需按規定順序，屬性間以空格隔開，否則不生效：
+            font：font-style font-weight font-size font-family */
+            /* 複合字體屬性中必須包含font size和font family，否則不生效*/
+            font: italic 700 24px Arial
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 標題標籤較為特殊，需要為其單獨指定大小 */ -->
+    <h3>still life</h3>
+    <p>次年的日暮時分 百花盛放的春天 仲夏夜的夢</p>
+    <p>秋天落下 冬天下雪 1年4次 又再到春天</p>
+    <p>漸生感情的我年少的歲月 現在要說再見了</p>
+    <p>曾經美麗過 我們的春天、夏天、秋天、冬天</p>
+    <p class="bold"><em> four seasons for no reason.</em></p>
+    <p class="複合屬性">雨過天青後 悲哀再次成為 a happy end</p>
+
+</html>

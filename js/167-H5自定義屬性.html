@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div getTime="20" data-index="2" data-list-name="andy"></div>
+    <script>
+        //1.所有自定義屬性由data-開頭
+
+        var div = document.querySelector('div');
+        console.log(div.getTime);//undefined
+        console.log(div.getAttribute('getTime'));//20
+        div.setAttribute('data-time',20)
+        console.log(div.getAttribute('data-index'));//2
+       
+
+        //H5新增獲取自定義屬性的方法
+        //dataset 是一個集合 裡面存放了所有以data-開頭的自定義屬性
+        //如果在自定義屬性裡面有多個-鏈接的單詞，我們獲取時採取駝峰命名法
+        console.log(div.dataset.index); //2
+        console.log(div.dataset['index']) //2
+        console.log(div.dataset.listName);//andy
+
+        
+
+
+        
+    </script>
+</body>
+</html>

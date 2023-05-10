@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角形</title>
+    <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            /* border: solid 10px paleturquoise; */
+            border-bottom: solid 20px paleturquoise;
+            border-top: solid 20px palegoldenrod;
+            border-left: solid 20px palegreen;
+            border-right: solid 20px peachpuff;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            /* 除了上邊框外，其他邊框顏色改為透明色，得到一個倒三角形 */
+            border: solid 20px transparent;
+            border-top: solid 20px palegoldenrod;
+
+        }
+
+        .box {
+            position: relative;
+            width: 120px;
+            height: 249px;
+            background-color: pink;
+
+        }
+
+        .box span {
+            position: absolute;
+            right: 15px;
+            /* 因整個span盒子的高度為10px{上border5px+下border5px} */
+            top: -10px;
+            width: 0;
+            height: 0;
+            /* 為了照顧兼容性 */
+            line-height: 0;
+            font-size: 0;
+            border: solid 5px transparent;
+            border-bottom: solid 5px pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <p></p>
+    <div class="triangle"></div>
+
+    <div class="box">
+        <span></span>
+    </div>
+
+</body>
+
+</html>

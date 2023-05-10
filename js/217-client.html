@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 10px solid rebeccapurple;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+   <div></div>
+   <script>
+    //client與offset最大區別是不包含邊框
+    var div = document.querySelector('div');
+    console.log(div.clientWidth);//200 加padding後是220
+    
+
+   </script>
+</body>
+</html>

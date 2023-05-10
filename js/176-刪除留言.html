@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            background-color: pink;
+        }
+        li a {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10" placeholder="請留言"></textarea>
+    <button>發佈</button>
+    <ul>
+      
+    </ul>
+
+    <script>
+       //1. 獲取元素
+       var btn = document.querySelector('button');
+       var text = document.querySelector('textarea');
+       var ul = document.querySelector('ul');
+       //2. 註冊事件 
+       btn.onclick = function () {
+           if (text.value == ''){
+               alert('輸入內容不能為空')
+           } else {
+               //創建元素
+               var li = document.createElement('li');  
+               //元素賦值              
+               li.innerHTML = text.value + "<a href = 'javascript:;'>刪除</a> ";
+               //添加元素
+               ul.insertBefore(li,ul.children[0])
+               //刪除元素 刪除當前鏈接的父元素——li （this.parentNode）
+               var as = document.querySelectorAll('a');
+               for(var i = 0 ; i < as.length;i++){
+                as[i].onclick = function(){
+                    //因li的父元素為ul，因此透過操作ul來刪除它的子元素li（當前a的parentNode）
+                   ul.removeChild(this.parentNode); 
+                }
+               }
+           }
+           }
+
+       
+    </script>
+</body>
+</html>

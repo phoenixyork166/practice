@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="pig">天竺鼠</button>
+    <button id="piggy">阿米同啤啤</button>
+    <p></p>
+    <img src="../image/220px-Two_Adult_Guinea_Pigs_(cropped).jpg" title="兩隻天竺鼠">
+
+
+    <script>
+        var btn1 = document.getElementById('pig')
+        var btn2 = document.getElementById('piggy')
+        var img = document.querySelector('img')
+
+        btn2.onclick = function () {
+         img.src = '../image/阿米同啤啤.jpg'
+         img.width = 200
+         img.title = '阿米同啤啤'
+        }
+
+        btn1.onclick = function () {
+            img.src = '../image/220px-Two_Adult_Guinea_Pigs_(cropped).jpg'
+            img.title = '兩隻天竺鼠'
+        }
+        
+    </script>
+</body>
+</html>

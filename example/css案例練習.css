@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: normal;
+    color: white;
+    text-shadow: 2px 2px 4px pink;
+}
+
+div {
+    text-align: center;
+    color: rgb(90, 79, 79);
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.search {
+    color: blue;
+    width: 170px;
+}
+
+.btn {
+    font-weight: 700;
+    background-color: pink;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.img {
+    text-align: center;
+}
+
+p {
+    text-indent: 2em;
+    line-height: 32px;
+}

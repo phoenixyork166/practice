@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+    <a href="https://www.google.com.hk/">google</a>
+    <form action="https://www.google.com.hk/">
+        <input type="submit" value="提交" name="sub">
+    </form>
+    <script>
+        //常見事件對象的屬性和方法
+        //1. 返回事件類型
+        var div = document.querySelector('div');
+        div.addEventListener('click', fn);
+        div.addEventListener('mouseover', fn);
+        div.addEventListener('mouseout', fn);
+
+        function fn (e){
+            console.log(e.type); //mourseover mouseout click
+        }
+
+        //2. 阻止默認行事件 如讓鏈接不跳轉 或者 按鈕不提交
+
+        var a = document.querySelector('a');
+        a.addEventListener('click' ,function(e){
+            e.preventDefault(); //dom標準寫法
+        })
+        //傳統註冊方式
+        a.onclick = function(){
+            //普通瀏覽器 e.preventDefault()
+            //低版本瀏覽器
+            e.returnValue;
+            //可以利用return false 也能阻止默認行為 沒有兼容性問題; 但return之後的代碼不執行。而且只限於傳統的註冊方式
+            return false;
+        }
+         
+
+    </script>
+</body>
+</html>

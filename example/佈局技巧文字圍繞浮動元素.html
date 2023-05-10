@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字圍繞浮動元素</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 500px;
+            height: 250px;
+            background-color: pink;
+            padding: 5px;
+        }
+
+        .pic {
+            /* 浮動的特性：浮動的元素只會壓住它下面的標準流盒子，不會壓住下面標準流盒子的文字和圖片 */
+            float: left;
+            vertical-align: top;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="pic">
+            <img src="../image/220px-Two_Adult_Guinea_Pigs_(cropped).jpg" alt="">
+        </div>
+        <p>豚鼠，又名天竺鼠、葵鼠、荷兰猪，在动物学的分类是哺乳纲啮齿目豚鼠科豚鼠属。</p>
+    </div>
+
+</body>
+
+</html>

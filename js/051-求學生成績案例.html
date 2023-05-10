@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var member = prompt('請輸入班內學生數量');
+        var sum = 0;
+        var average = 0;
+
+        for(var i = 1; i <= member; i++) {
+           var mark = prompt ('請輸第' + i + '個學生的成績')
+           sum = sum + parseFloat(mark);
+           average = sum / member;
+        }
+
+        alert('班級總成績為'+ sum + '分');
+        alert('班級平均分為'+ average + '分')
+
+        
+
+    
+            
+
+
+
+        
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotateX</title>
+    <style>
+        body {
+            perspective: 300px;
+        }
+        img {
+            display: block;
+            margin: 100px auto;
+            transition: all 1s;
+        }
+
+        img:hover {
+            /* 沿著X軸轉動 */
+            /* 正值向後傾倒 */
+            /* 左手準則 */
+            transform: rotateX(45deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="../image/220px-Two_Adult_Guinea_Pigs_(cropped).jpg" alt="">
+    
+</body>
+</html>

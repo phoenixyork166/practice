@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1
+        //console.log(num);
+        //2
+        console.log(num); //undefined
+        var num = 10; //相當於執行了y以下代碼
+        var num //未賦值
+        console.log(num); //因上一行代碼中未賦值，因此輸出時undefined
+        num = 10;
+        
+        //3
+        fn(); //11
+
+        function fn() {
+            console.log(11);
+        }
+        //因為函數提升會把 function fn() 函數聲明提升掉最上面
+
+        //4
+        fun() //is not a function
+        var fun = function() {
+            console.log(22);
+            
+        }
+        //相當於執行了以下代碼：
+        var fun //未賦值 未有函數
+        fun(); //因未有函數 因此此處無法調用
+        fun = function() {
+            console.log(22);
+            
+        }
+        //因此函數表達式，必須寫在函數的後面
+
+        //1. js引擎運行js分兩步： 預析 解代碼執行
+        //(1). 預解析： js引擎會把js裡面所有的var 和 function 提升到當前作用域的最前面
+        //(2). 代碼執行 按照代碼書寫的順序從上到下執行
+
+        //2. 預解析分為 變量預解析(變量提升) 函數預解析(函數提升)
+        //(1) 變量提升 就是所有的變量聲明提升到當前作用域最前面，不進行賦值操作
+        //(2) 函數提升 就是把所有的函數聲明提升到當前作用域的最前面 不調用函數
+
+    
+
+      
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

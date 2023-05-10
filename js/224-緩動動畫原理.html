@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn1000">start to 1000</button>
+    <button class="btn500">start to 500</button>
+    <div></div>
+    <script>
+        //核心算法（目標值-現在的位置）/10 為每次移動的距離
+        
+        function animate(obj, target, callback) {
+            clearInterval(obj.timer);
+           ;
+            obj.timer = setInterval(function() {
+                //distance 需要寫在定時器裡面
+                //把distance改為整數 不要出現小數
+                //var distance = Math.ceil((target - obj.offsetLeft)/20)
+                var distance = (target - obj.offsetLeft)/10;
+                distance = distance > 0 ? Math.ceil(distance) : Math.floor(distance);
+           
+                if (obj.offsetLeft == target){ 
+                    //停止動畫
+                clearInterval(obj.timer)
+                //回調函數寫在定時器結束時
+                if(callback) {
+                    callback()
+                }
+            }     
+
+            //運算動畫就是 盒子當前的位置 + 固定值
+            //緩速動畫就是 盒子當前位置 + 變化值
+            obj.style.left = obj.offsetLeft + distance +'px'
+        },30)
+        }
+        var btn1000 = document.querySelector('.btn1000')
+        var btn500 = document.querySelector('.btn500')
+        var div = document.querySelector('div'); 
+        btn1000.addEventListener('click',function(){
+            animate(div,1000,function(){
+               //alert('hello')
+               div.style.backgroundColor = 'green'
+            })
+        })
+        btn500.addEventListener('click',function(){
+            animate(div,500)
+        })
+    </script>
+</body>
+</html>

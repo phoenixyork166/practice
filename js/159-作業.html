@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 200px;
+            height: 25px;
+            outline: none;
+            border: 1px solid #ccc;
+            color: #ccc;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="請輸入用戶名">
+
+    <script>
+        var input = document.querySelector('input') 
+
+        input.onfocus = function name() {
+               input.style.borderColor = 'pink';
+               input.value = '';
+                    
+           } 
+        
+        input.onblur = function () 
+        { if (input.value == '') {
+            input.style.borderColor = '#ccc'
+            input.value = '請輸入用戶名'
+        }
+           
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

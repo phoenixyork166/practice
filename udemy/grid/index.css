@@ -1,0 +1,45 @@
+* *::before, *::before{
+    box-sizing: border-box;
+}
+
+.grid-item {
+    background-color: rgb(239, 241, 107);
+    border: 5px solid mediumturquoise;
+    font-size: 25px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: 200px 100px; */
+    grid-template-rows: minmax(150px,auto);
+    grid-auto-rows: 150px;
+    /* grid-column-gap: 20px;
+    grid-row-gap: 10px; */
+    grid-gap: 20px;
+    /* grid-template-areas: 'header header' 'siderbar content' 'siderbar content'; */
+
+}
+
+.gird-item1{
+    /* grid-area: header; */
+    /* 佔據兩格，因為colume之間的gap也算1格，因此grid-column-end為3 */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    /* 佔據全行 */
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+    /* grid-column: 1/-1; */
+    grid-column: span 3;
+}
+
+.gird-item2{
+    /* grid-area: siderbar; */
+    grid-row: span 2;
+}
+
+.gird-item3{
+    grid-row: span 2;
+}
+
+

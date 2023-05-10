@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>首頁</li>
+            <li>產品</li>
+        </ul>
+    </div>
+    <script>
+        //1. document.getElementsByClassName() 根據類名獲得某些元素集合 以偽數組形式 存儲
+        var boxes = document.getElementsByClassName('box')
+        console.log(boxes); //[div.box, div.box]
+
+        //2. document.querySelector 返回指定選擇器的第一個元素對象
+        var firstbox = document.querySelector('.box')
+        console.log(firstbox); //<div class="box">盒子1</div>
+
+        var nav = document.querySelector('#nav')
+        console.log(nav);
+        /* <div id="nav">
+              <ul>
+                  <li>首頁</li>
+                  <li>產品</li>
+              </ul>
+            </div> */
+
+        var li = document.querySelector('li');
+        console.log(li); //<li>首頁</li>
+
+        //3. ducument.querySelectorAll() 返回指定選擇器的所有元素對象，存儲為偽數組
+        var allbox = document.querySelectorAll('.box');
+        console.log(allbox); //[div.box, div.box]
+        var lis = document.querySelectorAll('li');
+        console.log(lis); //[li, li]
+
+
+
+
+    </script>
+</body>
+</html>

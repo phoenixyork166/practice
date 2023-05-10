@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //變量的作用域：根據作用域的不同，變量分為全局變量和局部變量
+        // 1. 全局變量；在全局作用域下的變量
+        //注意，如果在函數內部沒有聲明（var）。直接賦值的變量也屬於全局變量！
+        var num = 10; //num就是一個全局變量
+        console.log(num);
+        function fn() {
+            //函數中也可以調用全局變量
+            console.log(num);
+        }
+        fn()
+        //2. 局部變量；在函數內部變量就是局部變量
+        //注意 函數的形參也可以是局部變量
+
+        function fun() {
+            var num1 = 101; //num1 是局部變量
+            num2 = 20;
+        }
+        fun();
+        //console.log(num1); //undefined
+        console.log(num2);
+        //3. 從執行效率來看全局變量和局部變量 
+        //(1) 全局變量 只有在瀏覽器關閉的時候才會銷毀，比較佔內存資源
+        //(2) 局部變量 當我們程序執行完畢就會銷毀，比較節約內存資源
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

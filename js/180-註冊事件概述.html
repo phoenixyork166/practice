@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>傳統註冊事件</button>
+    <button>方法監聽註冊事件</button>
+    <button>attachEvent</button>
+    <script>
+        //傳統註冊事件，利用on開頭
+        //註冊的事件具有唯一性 後面的處理函數會把前面的覆蓋
+        var btns = document.querySelectorAll('button');
+        btns[0].onclick = function(){
+           alert('hi'); 
+        }
+        btns[0].onclick = function(){
+           alert('bye'); 
+        }
+
+        //方法監聽註冊方式
+        //同一個元素，同一個事件可以添加多個函數處理程序 依次執行
+        //EventTarget.addEventListener(type,lisenter,usecapture)
+        //裡面的事件類型必須是字符串 必定加引號 而且不帶on
+        btns[1].addEventListener('click', function(){
+            alert('22')
+        });
+        btns[1].addEventListener('click', function(){
+            alert('33')
+        });
+        btns[1].addEventListener('click', function(){
+            alert('44')
+        })
+
+
+        //attachEvent i9以前的版本支持
+        btnss[2].attachEvent('onclick',function(){
+            alert('11');
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行內塊元素的巧妙運用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box a {
+            /* 行內塊元素默認帶有小間距 */
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-color: lightgray;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 36px;
+            text-decoration: none;
+            font-size: 14px;
+            color: gray;
+        }
+
+        .box {
+            /* 給所有a的父元素添加水平居中，可直接讓所有a於頁面上水平居中 */
+            text-align: center;
+        }
+
+        /*需注意選擇器的權重問題，若只選擇.prev，權重為10，少於.box a的11，因此需要再添加上.box增加權重，否則樣式無法生效 */
+        .box .prev,
+        .box .next {
+            width: 85px;
+        }
+
+        .box .current,
+        .box .elp {
+            background-color: white;
+            border: none;
+        }
+
+        .box input {
+            width: 45px;
+            height: 36px;
+            border: 1px solid #ccc;
+            /* 取消輸入時的輪廓線  */
+            outline: none;
+        }
+
+        .box button {
+            width: 60px;
+            height: 35px;
+            font-size: 14px;
+            background-color: lightgray;
+            border: 1px solid #ccc;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="#" class="prev">&lt;&lt;上一頁</a>
+        <a href="#" class="current">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#" class="elp">... </a>
+        <a href="#" class="next">下一頁&gt;&gt;</a>
+        到第 <input type="text"> 頁
+        <button>確定</button>
+    </div>
+
+</body>
+
+</html>

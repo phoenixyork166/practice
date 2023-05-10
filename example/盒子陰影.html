@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子陰影</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 200px auto;
+
+        }
+
+        div:hover {
+            /* 盒子陰影參數（按順序）：水平陰影(必須)，垂直陰影(必須)，blur，陰影大小，陰影顏色  */
+            /* 鼠標經過盒子顯示陰影 */
+            box-shadow: 10px 10px 10px 2px gray;
+        }
+
+        .inset {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 盒子陰影參數（按順序）：水平陰影，垂直陰影，blur，陰影大小，陰影顏色 內陰影 */
+            box-shadow: 10px 10px 10px 2px gray inset;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+
+    <div class="inset"></div>
+</body>
+
+</html>

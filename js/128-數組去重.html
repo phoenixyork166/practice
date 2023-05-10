@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //遍歷就數組，用舊數組元素去查詢新數組(indexOf),如果該元素不存在於新數組（indexOf() = -1 ). 則添加，否則就不添加
+        var array = ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b'];
+        
+
+        function unique(array) {
+            var newArray = [];
+            for (var i =0; i <array.length; i++){
+                if (newArray.indexOf(array[i]) === -1){
+                newArray.push(array[i])
+                }
+
+            }
+            return newArray
+            
+        }
+        console.log(unique(array));
+        console.log(unique(['blue','green', 'red', 'blue']));
+            
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

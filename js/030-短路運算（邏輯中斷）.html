@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 用boolean參與的邏輯運算 ture / false
+        //2. 123 && 456 是值 或者是 表達式 參與邏輯運算
+        //邏輯與短路運算
+        //3. 邏輯與表達運算，如果表達式 結果為true，返回表達式2，如果表達式1為false，則返回表達式1
+        console.log(123 && 456); //456
+        console.log(0 && 456); //0
+
+        console.log(0 && 1 + 2 & 456 * 56789); //0
+        console.log('' && 1 + 2 & 456 * 56789); //''
+        //4. 邏輯或短路運算 如果表達式1 結果為true，則返回表達式1，如果表達式1為false，則返回表達式2.
+        console.log(123 || 456); //123
+        console.log(123 || 456 || 789);//123
+        console.log(0 || 456 || 456+123);//456
+
+        var num = 0;
+        console.log(123 || num++); //123
+        console.log(num); //0
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //window對象是瀏覽器的頂級對象
+        //1.它是js訪問瀏覽器窗口的一個接口
+        //2.它是一個全局對象，定義在全局作用域中的變量、函數都會變成window對象的屬性和方法
+        /* window.document.querySelector() */
+        var num = 10;
+        console.log(window.num);
+
+        function fn() {
+            console.log(11);
+        }
+
+        fn();
+        window.fn();
+        window.alert('11')
+
+        console.dir(window);
+        console.log(window.name); //空
+    </script>
+</body>
+</html>

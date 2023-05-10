@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        var random = getRandom(1,10)
+
+     /*   do {
+           var num = parseInt(prompt('請輸入數字'));
+
+           if (num > random) {
+               alert('數字大了')
+           };
+           if (num < random) {
+               alert('數字小了')
+           };
+           if (num == random) {
+               alert('猜對了');
+               break;
+           } */
+           
+    //  while (num !== random);
+
+       while (true) { //死循環
+        //while 循环会在指定条件为真时循环执行代码块。
+        //執行的代碼塊：
+        var num = parseInt(prompt('請輸入數字'));
+        //if 
+        if (num > random) {
+               alert('數字大了')
+           } else if (num < random) {
+               alert('數字小了')
+           } else {
+               alert('猜對了');
+               break; //退出循環
+           }
+    
+
+           
+       }
+            
+          
+            
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

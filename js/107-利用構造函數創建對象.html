@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用構造函數創建對象
+        // 我們需要創建4只豬豬的對象 相同的屬性; 名字 年齡 性別 相同的方法：喜愛的食物
+        //構造函數的語法格式
+       /*  function 構造函數名() { */
+            //this 當前對象
+            /* this.屬性 = 值
+            this.方法 = function(){}
+        }
+        new 構造函數名(); */
+
+        function Pig(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(song){
+                console.log(song);
+            }
+
+        }
+        var mai = new Pig('mai', 1 , 'male'); //調用函數 返回的是對象
+        console.log(typeof mai); //object
+        console.log(mai.name);
+        mai.sing('515151');
+        var bearbear = new Pig('bearbear', 1, 'male');
+        console.log(bearbear.name);
+        bearbear.sing('wheek!!')
+
+
+        //1. 構造函數名的首字母必須大寫
+        //2. 構造函數不需要 return 就可以返回結果
+        //3. 我們調用構造函數 必須使用 new
+        //4. 我們只要new Pig() 調用函數 就等於創建了一個對象{}
+        //5. 屬性和方法前面不許添加 this
+         
+        
+
+
+          
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

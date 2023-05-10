@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="begin">start</button>
+    <button class="stop">stop</button>
+    <script>
+        var begin = document.querySelector('.begin')
+        var stop = document.querySelector('.stop');
+        var timer = null; //全局變量 null是一個空對象
+        begin.addEventListener('click', function(){
+            //不可直接var timer 因為這是在函數內 屬於局部變量 函數外屬於undefined
+            timer = setInterval(function(){
+                console.log('how are you');
+            },1000)
+        })
+        stop.addEventListener('click', function(){
+            clearInterval(timer)
+        })
+    </script>
+</body>
+</html>

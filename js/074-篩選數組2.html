@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var array = [2, 0, 6, 1, 77, 0, 52, 0, 52, 25, 7];
+         var newarray = [];
+         newarray.length = 0;
+         for (var i = 0; i < array.length; i++) {
+             if (array[i] > 10) {
+                    newarray[newarray.length] = array[i];
+                    //newarray.length 初始值為0
+                    //當array中出現第一個大於10， newarray[0] = array[i]；
+                    //之後，newarray.length就會自動變化成1；
+                    //然後array中第二個大於10的值，就會成為newarray[1];之後newarraylength變成2，如此類推
+  
+             }
+             
+         }
+         console.log(newarray);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

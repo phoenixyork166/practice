@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動畫序列</title>
+    <style>
+        /* 1. 可以咗多個狀態的變化 keyframe是關鍵幀的變化 */
+        /* 2. 裡面的百分比是正數 */
+        /* 3.裡面的百分比是animation duration的劃分 */
+        @keyframes move {
+            0% {
+                transform: translate(0,0) ;
+            }
+            25% {
+                transform: translate(1000px,0);
+            }
+
+            50% {
+                transform: translate(1000px,500px);
+            }
+
+            75% {
+                transform: translate(0,500px);
+            }
+
+            100% {
+                transform: translate(0,0);
+            }
+            
+        
+        }
+        /* 動畫序列 */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            animation-name: move;
+            animation-duration: 4s;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

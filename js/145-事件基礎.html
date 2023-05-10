@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">糯米糍</button>
+    <script>
+        //點擊一個按鈕，彈出對話框
+        //1. 事件由三部分組成 事件源 事件類型 事件處理程序 也成為事件三要素
+        //(1) 事件源 事件被觸發的對象 此處為 按鈕
+        var btn = document.getElementById('btn')
+        //(2) 事件類型 如何觸發 什麼事件 例如鼠標點擊(onclick) 鼠標經過 
+        //(3) 事件處理程序 通過一個函數賦值的方式完成
+        btn.onclick = function () {
+            alert('515151')
+        }
+
+
+    </script>
+</body>
+</html>

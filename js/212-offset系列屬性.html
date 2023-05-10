@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .father{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 150px;
+        }
+
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin-left: 45px;
+        }
+        .w {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            background-color: skyblue;
+            margin: 0 auto 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+        <div class="w"></div>
+    </div>
+    <script>
+        //offset 系列
+        var father = document.querySelector('.father');
+        var son = document.querySelector('.son')
+        //可以得到元素的偏移 位置 返回不帶單位的數值 可動態變化
+        console.log(father.offsetTop);//150
+        console.log(father.offsetLeft);//150
+        //以帶有定位的父元素為準。若父元素沒有定位或沒有父元素，則以body為准
+        console.log(son.offsetLeft);//45 
+
+        //可以得到元素的大小 寬度和高度
+        //border和padding會撐大盒子，因此offsetWidth 和 offsetHeight 也包括border和padding 不包括margin
+        var w = document.querySelector('.w')
+        console.log(w.offsetWidth);//240
+        console.log(w.offsetHeight);//240
+
+        //可以返回帶有定位的父親 否則返回body
+        console.log(son.offsetParent);//father 必須帶有定位 
+        console.log(son.parentNode);//father 返回最近一級的父親 不管有沒有定位
+
+    </script>
+</body>
+</html>

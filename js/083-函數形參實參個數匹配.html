@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //參數形參實參個數匹配
+        function getSum(num1, num2) {
+            console.log(num1 + num2);
+        }
+        //1. 如果實參的個數和形參的個數一致，則正常輸出結果
+        getSum(1, 2); //3
+        //2. 如果實參的個數多於形參,會取到形參的個數
+        getSum(1, 2, 3) //3
+        //3. 如果實參的個數小於形參
+        getSum(1) //NaN 因形參可以看做是不用聲明的變量，num2是一個變量但沒有賦值，因此是默認值undefined，此時是1 + undefined, 返回值是NaN
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

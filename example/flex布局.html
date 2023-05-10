@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局</title>
+    <style>
+        div {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color:palegreen;
+            /* 元素是跟著主軸來排列 */
+           /* flex-direction: row; */
+           /* flex-direction: row-reverse; */
+           /* 若主軸設置 為y軸，x軸就會成為側軸 */
+           flex-direction: column;
+        }
+
+        div span {
+            /* width: 150px; */
+            height: 100px;
+            background-color: palegoldenrod;
+            margin-right: 5px;
+            /* 平均分為3分 */
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    
+</body>
+</html>

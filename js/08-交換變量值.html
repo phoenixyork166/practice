@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 需要一個臨時變量
+        // 2. 把apple1 給我們的臨時變量 temp
+        // 3. 把apple2 裡面的蘋果給 apple1
+        // 4. 把temp中的apple1 給apple1
+        var temp; 
+        var apple1 = '青蘋果';
+        var apple2 = '紅蘋果';
+        // 把apple1放到temp
+        temp = apple1;
+        apple1 = apple2;
+        apple2 = temp;
+        console.log(apple1);
+        console.log(apple2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

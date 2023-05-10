@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            padding: 10px;
+            border: 10px solid beige;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content  i am content
+    </div>
+</body>
+<script>
+    //scroll 系列 不包含邊框 包含padding
+    var div = document.querySelector('div');
+    console.log(div.scrollHeight); //244 因為測量的是內容的高度
+
+   div.addEventListener('scroll', function(){
+    console.log(div.scrollTop);
+   })
+</script>
+</html>

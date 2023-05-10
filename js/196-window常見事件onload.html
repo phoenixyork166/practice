@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //窗口加載事件 待頁面中所有內容加載完成，包括dom元素，圖片，css，flash，再觸發事件
+        /* window.onload = function(){
+       } */
+
+        window.addEventListener('load', function(){
+            var btn = document.querySelector('button');
+        btn.addEventListener('click',function(){
+            alert('click me')
+        })
+        })
+        window.addEventListener('load', function(){
+            
+            alert('22')
+        })
+
+        //DomContentLoaded 僅當dom加載完成 不包括樣式表 圖片 flash等等 就觸發事件
+        document.addEventListener('DOMContentLoaded', function(){
+            alert('33')
+        })
+        //先彈出33（因最先加載完），在彈出22，最後彈出點擊事件
+    </script>
+    <button>click</button>
+
+
+    
+</body>
+</html>

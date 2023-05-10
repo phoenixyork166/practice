@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            /* 直角等邊三角形  */
+            width: 0;
+            height: 0;
+            /* border: solid 10px paleturquoise; */
+            border-top: solid 50px palegoldenrod;
+            border-right: solid 50px peachpuff;
+            /* 把下面的邊框設置為0px */
+            border-bottom: solid 0px paleturquoise;
+            border-left: solid 50px palegreen;
+
+        }
+
+        .box2 {
+            width: 0;
+            height: 0;
+            /* 把上邊的邊框改成透明色 */
+            border-top: solid 100px transparent;
+            border-right: solid 50px peachpuff;
+            /* 把下面的邊框設置為0px */
+            border-bottom: solid 0px paleturquoise;
+            /* 把左邊的邊框改成0px */
+            border-left: solid 0px palegreen;
+        }
+
+        .price {
+            width: 160px;
+            height: 24px;
+            border: 1px solid red;
+            text-align: center;
+            line-height: 24px;
+
+        }
+
+        .sale {
+            /* 浮動後元素具有行內塊元素特性，可設置高度寬度 */
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 24px;
+            background-color: red;
+            color: #fff;
+            margin-right: 8px;
+        }
+
+        .sale i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-top: solid 24px transparent;
+            border-right: solid 12px white;
+            border-bottom: solid 0px paleturquoise;
+            border-left: solid 0px palegreen;
+
+        }
+    </style>
+</head>
+
+<body>
+    等邊直角三角形
+    <div class="box1"></div>
+    <p></p>
+    等腰直角三角形
+    <div class="box2"></div>
+    案例
+    <div class="price">
+        <span class="sale">
+            ￥1650
+            <i></i></span>
+        <span style="text-decoration:line-through">￥5650</span>
+
+    </div>
+
+
+</body>
+
+</html>

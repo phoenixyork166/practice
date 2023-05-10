@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       //使用時間戳，用戶輸入時間總的毫秒數減去現在時間的總毫秒數，得到的就是剩餘時間的毫秒數。
+       //把剩餘時間總的毫秒數轉換為 天 時 分 秒
+       function countDown(time) {
+           var nowTime = +new Date();//當前的毫秒數
+           var targetTime = +new Date(time); //用戶輸入目標時期的總毫秒數
+           var times = (targetTime - nowTime)/1000 ///剩餘的秒數
+           var day = parseInt(times/60/60/24);
+           day = day < 10 ? '0'+ day : day;
+           var hr = parseInt(times/60/60%24);
+           hr = hr < 10 ? '0'+ hr : hr;
+           var min = parseInt(times/60%60);
+           min = min < 10 ? '0'+ min : min;
+           var second = parseInt(times%60);
+           second = second < 10 ? '0'+ second : second
+           return day + '日' + hr + '小時' + min + '分' + second + '秒';
+           
+       }
+       console.log(countDown('2023-3-1 23:00:00')); //195日00小時49分57秒
+       var date = new Date();
+       console.log(date); //Thu Aug 18 2022 22:10:02 GMT+0800
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

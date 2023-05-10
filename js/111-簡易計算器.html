@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var result = 0;
+        var num1 = 0;
+        var num2 = 0;
+        do {
+            var operation = prompt('歡迎使用簡易計算器' + '\n' + '1.加法運算；' +'\n' + '2.減法運算；' +'\n' + '3.乘法運算；' +'\n' + '4.除法運算；' +'\n' + '5.退出' + '\n' + '請輸入你的選項')
+            switch (operation) {
+                case '1':
+                    var num1 = prompt('請輸入數字');
+                    var num2 = prompt('請輸入數字');
+                    var result = parseFloat(num1) + parseFloat(num2);
+                    alert('結果是' + result)                 
+                    break;
+                
+                case '2':
+                    var num1 = prompt('請輸入數字');
+                    var num2 = prompt('請輸入數字');
+                    var result = num1 - num2;
+                    alert('結果是' + result)                   
+                    break;
+                
+                case '3':
+                    var num1 = prompt('請輸入數字');
+                    var num2 = prompt('請輸入數字');
+                    var result = num1 * num2;
+                    alert('結果是' + result)                
+                    break;
+                
+                case '4':
+                    var num1 = prompt('請輸入數字');
+                    var num2 = prompt('請輸入數字');
+                    var result = num1 / num2;  
+                    alert('結果是' + result)
+                    break;   
+                
+                case '5':
+                    alert('已退出');
+                    break;
+                          
+            }
+            
+        } while (operation !== '5');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

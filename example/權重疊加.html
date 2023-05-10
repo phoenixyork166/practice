@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>權重的疊加</title>
+</head>
+<style>
+    /* 複合選擇器會有權重疊加的問題 */
+    /* li 的權重為 0,0,0,1 */
+    li {
+        color: red
+    }
+
+    /* ul li的權重為 0,0,0,1+0,0,0,1 = 0,0,0,2 */
+    ul li {
+        color: green;
+    }
+
+    /* .piggy li的權重為 0,0,1,0 + 0,0,0,1 = 0,0,1,1 */
+    .piggy li {
+        color: pink;
+    }
+</style>
+
+<body>
+    <ul class="piggy">
+        <li>糯米糍</li>
+        <li>白糖糕</li>
+        <li>西瓜皮</li>
+    </ul>
+
+</body>
+
+</html>

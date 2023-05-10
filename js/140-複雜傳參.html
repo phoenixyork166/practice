@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //複雜類型傳參。實際上是吧變量在棧空間裡保存的堆地址 複製給形參，形參和實參保存的是同一個地址，操作的是同一個對象
+        function Person(name) {
+            this.name = name;
+        }
+
+        function f1(x) {
+            console.log(x.name);//mai
+            x.name = 'bear';
+            console.log(x.name);//bear
+        }
+
+        var p = new Person('mai');
+        console.log(p.name);//mai
+        f1(p); //mai bear
+        console.log(p.name); //bear
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新增屬性選擇器</title>
+    <style>
+        /* 選擇input，但是同時具有vakue屬性的元素 */
+        input[value] {
+            color: pink;
+        }
+         /* 選取type中屬性值為text的元素 */
+        input[type=text] {
+            color: pink;
+        }
+        /* 選擇div。具有class屬性，屬性值必須以icon開頭 */
+        div[class^=icon] {
+            color: blueviolet;
+        }
+        
+        div[class$=end] {
+            color: red;
+        }
+         
+    </style>
+</head>
+<body>
+    <!-- 利用屬性選擇器，可以不用藉助類選擇器或id選擇器 -->
+    <input type="text" value="user name">
+    <input type="text">
+    <!-- 屬性選擇器還可以選擇屬性=值得某些元素 -->
+    <input type="text" name="text">
+    <input type="password">
+     <!-- 屬性選擇器可以選擇屬性值開頭的某些元素 -->
+    <div class="icon1">小圖標</div>
+    <div class="icon2">小圖標</div>
+    <div class="icon3">小圖標</div>
+    <div class="icon4">小圖標</div>
+    <div>nothing</div>
+     <!-- 屬性選擇器可以選擇屬性值結尾的某些元素 -->
+     <div class="icon1end">小圖標</div>
+    <div class="icon2">小圖標</div>
+    <div class="icon3">小圖標</div>
+    <div class="icon4">小圖標</div>
+    <div>nothing</div>
+
+</body>
+</html>

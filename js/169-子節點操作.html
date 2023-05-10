@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>div</div>
+    <span>span</span>
+    <ul>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+    </ul>
+    <ol>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+    </ol>
+    <div class="demo">
+    <div class="box">
+        <span class="qrcode">x</span>
+    </div>
+</div>
+
+<script>
+    //透過DOM API獲取
+    var ul = document.querySelector('ol');
+    var lis = ul.querySelectorAll('li')
+
+    //透過子節點獲取 childNodes 獲得一個集合
+    console.log(ul.childNodes);//NodeList(9) 包含元素節點和文本節點(包含換行) 一般不使用
+    console.log(ul.childNodes[0].nodeType);//3
+    // 透過children 獲得所有子元素節點 實際開發常用
+    console.log(ul.children);//HTMLCollection(4) [li, li, li, li]
+
+
+
+
+
+    
+
+</script>
+</body>
+</html>

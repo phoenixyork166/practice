@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3圖片模糊</title>
+    <style>
+        img {
+            /* 括號中數值越大，圖片越模糊 */
+            filter: blur(5px);
+        }
+
+        img:hover {
+            filter: none;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <img src="../image/220px-Two_Adult_Guinea_Pigs_(cropped).jpg" alt="">
+    
+</body>
+</html>

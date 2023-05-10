@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動畫常見屬性</title>
+    <style>
+        @keyframes move {
+            0% {
+                transform: translate(0,0);
+            }
+
+            50% {
+                transform: translate(1000px,0px);
+            }
+
+            100% {
+                transform: translate(1000px,0) rotate(180deg);
+            }
+            
+            }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            /* animation-name: move; */
+            /* animation-duration: 3s; */
+            /* 運動曲線 */
+            /* animation-timing-function: ease; */
+            /* 何時開始 */
+            /* animation-delay: 5ms; */
+            /* 重複次數 */
+            /* animation-iteration-count: infinite; */
+            /* 是否反方向播放 ，默認是normal*/
+            /* 走馬燈效果 */
+            /* animation-direction: alternate; */
+            /* 動畫停止狀態保持在結束狀態。默認是backward返回起始狀態*/
+            /* animation-fill-mode: forwards; */
+            /* 簡寫： */
+            animation: move 3s linear 5ms 3 alternate forwards ;
+        }
+
+        div:hover {
+            /* 鼠標經過div，div動畫停止，鼠標離開繼續動畫 */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //continue 關鍵字
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue;
+                //只要遇到continue,就會直接退出本次循環 直接跳到i++
+            }
+            console.log('我在吃第' + i + '個菠蘿');
+        }
+
+        // 求1 ~ 100之間，除了能被7整除以外的整數和
+        var sum = 0;
+        for (var i = 1 ; i <= 100; i++) {
+            if (i % 7 == 0) {
+                continue;
+            } 
+        sum = sum + i;
+        }
+        console.log(sum);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

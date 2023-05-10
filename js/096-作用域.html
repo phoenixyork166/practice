@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. JavaScript作用域；就是代碼名字在某個範圍內起作用和效果，提高了程序的可靠性
+        // 更重要是減少命名衝突
+        //2. JS作用域(es6): 全局作用域 局部作用域
+        //3. 全局作用域：整個script標籤 或者是 一個js文件
+        var num = 10; 
+        console.log(num);
+        //寫在script標籤中，屬於全局作用域
+        //4. 局部作用域 (函數作用域)：在函數內部就是局部作用域 這個代碼名字只在函數內部起作用
+        function fun(){
+            //局部作用域
+            var num = 20;
+            console.log(num);
+        }
+        fun()
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

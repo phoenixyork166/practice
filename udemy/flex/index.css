@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+.box-item{
+    background-color: pink;
+    border: 5px solid mediumvioletred;
+    width:200px;
+    margin: 20px;
+
+}
+
+.box-item-1{
+   height: 100px;
+   flex-shrink: 0;
+}
+
+.box-item-2{
+    height: 200px;
+} 
+
+.box-item-3{
+    height: 300px;
+    flex-grow: 1;
+}
+
+.flexbox-container{
+    display: flex;
+    justify-content:flex-start;
+
+    
+}

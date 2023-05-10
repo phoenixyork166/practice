@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 10; //num 數字型
+        var PI = 3.14 //PI 數字型
+
+        // 1.八進制 0~7 程序中數字加0表示八進制
+        var num1 = 010;
+        console.log(num1); //010 八進制轉換為10進制就是8
+
+        var num2 = 012;
+        console.log(num2);
+
+        // 2. 十六進制 0~9 a~f 數字前加0x相等於十六進制 
+        var num3 = 0x9;
+        console.log(num3);
+
+        var num4 = 0xa
+        console.log(num4); 
+
+        // 數字型範圍
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+
+        // 無窮大
+        console.log(Number.MAX_VALUE*2); //超過最大值，會變成無窮大infinity
+        console.log(-Number.MAX_VALUE*2); //無窮小
+
+        // 非數字
+        console.log('你好'-100); //Nan
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

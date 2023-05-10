@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>額外標籤法</title>
+    <style>
+        .box1 {
+            width: 500px;
+            margin: auto;
+            background-color: antiquewhite;
+            border: solid 5px blue;
+
+        }
+
+        .box1 .one {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .box1 .two {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+
+        .footer {
+            height: 300px;
+            background-color: aquamarine;
+
+        }
+
+        .clear {
+            /* 清楚浮動的影響 */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <!-- 在最後一個浮動盒子的後面添加額外的標籤，作為墻閉合浮動，必須是塊記元素 -->
+        <div class="clear"></div>
+    </div>
+
+    <div class="footer"></div>
+</body>
+
+</html>

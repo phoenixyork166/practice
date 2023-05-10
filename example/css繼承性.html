@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css繼承性 行高的繼承</title>
+    <style>
+        body {
+            color: aqua;
+            /* 設置字體加粗，字體大小為12，行高為字體的1.5倍，微軟雅黑 */
+            font: 700 12px/1.5 'Microsoft Yahei'
+
+        }
+
+        div {
+            /* 子元素div繼承父元素body的行高 1.5， 為當前元素文字大小的1.5倍 */
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>繼承性</div>
+    <p>繼承性</p>
+
+</body>
+
+</html>

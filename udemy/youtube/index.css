@@ -1,0 +1,82 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style:none
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header_left{
+    display: flex;
+    align-items: center;
+}
+
+.header_menu{
+    margin: 0 16px;   
+}
+
+.youtube_logo{                                                                                             
+    margin-left: 16px;
+}
+
+.menuicons{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    grid-gap: 1.5rem;
+}
+
+.menu_channelicon{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.searchbar{
+    display: flex;
+    flex-grow: 1;
+    margin: 0 4rem;
+    
+} 
+
+.search_input{
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6em;
+    border: 1px solid #c6c6c6;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+    
+}
+
+
+.search_btn{
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    border-left: none;
+}
+
+.search_btn:hover{
+    background-color: #f0f0f0;
+}
+
+.searchbar a{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}

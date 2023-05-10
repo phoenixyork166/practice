@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外邊距margin</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+        }
+
+        .one {
+            margin-bottom: 20px;
+        }
+
+        /* 複合屬性與padding相似  */
+
+        /* .two { margin-top: 20px;} 可達至相同效果*/
+
+        .three {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            /* 為行內元素 或 行內塊元素 設置水平居中 */
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">
+        <p>水平居中</p>
+    </div>
+
+</body>
+
+</html>

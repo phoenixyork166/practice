@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+    <script>
+        //事件對象
+        var div = document.querySelector('div')
+        // 1. event 就是一個事件對象 寫到我們偵聽函數 的 小括號裡。視作形參
+        //2. 事件對象只有有了事件才存在 是系統給我們自動創建的
+        //3. 事件對象 是 我們事件的一系列相關數據的集合 跟事件相關的 比如鼠標點擊 就包含鼠標坐標 如果是鍵盤事件 裡面就包含的鍵盤事件信息 比如判斷用戶按下了哪個鍵  
+        //4. 這個事件對象我們可以自己命名 例如 event e  
+        //5. 事件對象也有兼容性問題 ie678 通過 Window.event
+
+        /* div.onclick = function(event){
+            console.log(event);
+        }
+        //PointEvent  */
+
+        div.addEventListener('click',function(e){
+            console.log(e);
+            console.log(Window.event);
+            //兼容性寫法 
+            e = e || Window.event;
+
+        })
+
+    </script> 
+    
+</body>
+</html>

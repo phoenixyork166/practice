@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.立即執行函數:不需要調用 立馬自己執行
+        function fn(){
+            console.log(1);
+        }
+        fn();
+        //2. 寫法 (function(){})()  
+        //或者 (function(){}()) 也可以傳遞參數
+         (function (a,b) {
+            console.log(a+b);
+            var num = 10;
+         })(1,2); //3
+         //第二個括號視為調用函數
+        (function (a,b){
+            console.log(a+b);
+            var num = 10;
+        }(2,3)) //5
+        //多個立即函數需要用；隔開
+        //3. 立即執行函數最大的作用 就是創建了一個作用域 裡面所有的變量都是局部變量
+    </script>
+</body>
+</html>

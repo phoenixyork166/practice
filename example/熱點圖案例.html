@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熱點圖</title>
+    <style>
+        .map{
+            position: relative;
+            width: 747px;
+            height: 617px;
+            margin: 0px auto;
+            background: url(map.png) no-repeat;
+            background-color: rgb(48, 46, 46);
+        }
+
+        .beijing {
+            position: absolute;
+            top: 227px;
+            right: 193px;
+        }
+
+        .taipei {
+            position: absolute;
+            top: 495px;
+            left: 658px;
+        }
+
+        .guangzhou {
+            position: absolute;
+            top: 540px;
+            left: 540px;
+        }
+
+        .dotted {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 50%;
+        }
+
+        div[class^="pulse"] {
+            position: absolute;
+            /* 讓波紋在父盒子中水平垂直居中 放大後就會中心向四周發散 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 8px;
+            height: 8px;
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+            animation: pulse 1.2s linear infinite;
+        }
+
+        /* 注意選擇器權重 */
+        /* 設置延遲，讓波紋逐個出現 */
+        div.pulse2 {
+            animation-delay: 0.4s;
+        }
+
+        div.pulse3 {
+            animation-delay: 0.8;
+        }
+
+        @keyframes pulse {
+            0%{}
+            70% {
+                /* 如用scale放大，會把box shadow一併放大，因此只放大寬高便可 */
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+            /* 放大時，邊框逐漸變透明，波紋效果 */
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="map">
+        <div class="beijing">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="taipei">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="guangzhou">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

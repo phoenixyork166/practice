@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 800px;
+            height: 400px;
+            background-color: pink;
+            /* 默認主軸為x ，沿主軸居中*/
+            /* 若主軸為y */
+            flex-direction: column;
+            justify-content: center;
+            /* 側軸居中 */
+            /* 拉伸，但是子盒子不要給高度(主軸為x，若主軸為y則不要給寬度) */
+            align-items: stretch;
+            /* 垂直居中 */
+            /* align-items: center; */
+        
+        }
+
+        div span {
+            /* width: 150px; */
+            height: 100px; 
+            background-color: antiquewhite;
+            color: #fff;
+            margin:10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+</html>

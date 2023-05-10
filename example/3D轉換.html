@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D轉換</title>
+    <style>
+        body {
+            /* 透視寫在被觀察元素的父盒子上  */
+            /* 透視越小，代表離眼睛越近，物體越大 */
+            perspective: 500px;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color:paleturquoise;
+            margin: 100PX auto;
+            /* transform: translateX(100px) translateY(100px) translateZ(100px) */
+            /* Translatez為0時，為物件原先大小，正值為越近，負值為遠 */
+            transform: translateZ(100px);
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

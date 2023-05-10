@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Feb() {
+            var year = prompt('請輸入年份')
+            //if 會自動判斷condition的結果是不是true，因此不用寫Year(year)==true,因如果函數返回的值是true，就會自動執行下面的代碼。
+            if(Year(year)){
+                alert('該年2月有29天') 
+            } else {
+                alert('該年2月有28天')
+            }
+        }
+        //調用函數
+        Feb();
+         function Year(year) {
+            //如果是閏年，返回true 否則是false
+            var flag = false;
+            if (year%4 == 0 && year % 100 !== 0 || year%400 == 0) {
+                flag = true
+            } 
+            return flag
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

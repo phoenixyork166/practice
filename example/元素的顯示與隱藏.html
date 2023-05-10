@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的顯示與隱藏</title>
+</head>
+<style>
+    .peppa {
+        /* 為peppa顯示display none之後，元素隱藏，位置也會消失 */
+        /* display: none; */
+        /* 添加display block後。元素會再次顯示 */
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+
+
+    }
+
+    .george {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+    }
+
+    .papa {
+        /* 設置visibility hidden，元素隱藏，位置保留 */
+        visibility: hidden;
+        width: 200px;
+        height: 200px;
+        background-color: lemonchiffon;
+    }
+
+    .mama {
+        width: 200px;
+        height: 200px;
+        background-color: lightsalmon;
+    }
+
+    .piggy {
+        /* 如果有定位的盒子，請慎重使用hidden，因為會隱藏佈局時故意溢出的部分 */
+        /* 溢出部分隱藏 */
+        /* overflow: hidden; */
+        /* 設置滾動條 */
+        /* overflow: scroll; */
+        /* 設置在需要的時候，添加滾動條顯示溢出部分 */
+        overflow: auto;
+        width: 200px;
+        height: 200px;
+        background-color: antiquewhite;
+    }
+</style>
+
+<body>
+    display演示
+    <div class="peppa">佩奇 </div>
+    <div class="george">喬治</div>
+    visibility演示
+    <div class="papa">爸爸</div>
+    <div class="mama">媽媽</div>
+    overflow演示
+    <div class="piggy">
+        豚鼠，又名天竺鼠、葵鼠、荷兰猪，在动物学的分类是哺乳纲啮齿目豚鼠科豚鼠属。尽管英文名字叫“guinea
+        pig”，但是这种动物既不是猪，也并非来自几内亚。其祖先来自南美洲的安第斯山脉，根据生物化学和杂交分析，豚鼠是一种荷兰猪诸如白臀豚鼠、艳豚鼠或草原豚鼠等近缘物种经过驯化的后代。因此，这种动物在大自然已经不复存在。
+    </div>
+
+
+
+</body>
+
+</html>

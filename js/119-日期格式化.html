@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var date = new Date();
+        console.log(date.getFullYear()); //返回當前日期的年 2022
+        console.log(date.getMonth()); //獲取當前月份（0-11）得到的月份比實際的小1,因此需要+1 //7
+        console.log(date.getMonth()+1); //8 
+        console.log(date.getDate()); //17
+        console.log(date.getDay()); //3 需注意 週日返回的是0
+
+        //我們寫一個 2022年8月17日 星期三
+        var year = date.getFullYear()
+        var month = date.getMonth()+ 1;
+        var dates = date.getDate();
+        var array = ['星期日','星期一','星期二', '星期三', '星期四', '星期五', '星期六']
+        var day = array[date.getDay()];
+        
+        console.log(year + '年' + month + '月' + dates + '日' + day); //2022年8月18日星期四
+
+        console.log(date.getHours());//18
+        console.log(date.getMinutes());//10
+        console.log(date.getSeconds());//16
+        console.log(date.getMilliseconds());//389
+        //要求封装當前的時分秒 格式00:00:00
+        function getTime() {
+            var time = new Date();
+            var hr = time.getHours();
+            hr = hr < 10 ? '0' + hr : hr 
+            var min = time.getMinutes();
+            min = min < 10 ? '0' + min : min
+            var second = time.getSeconds();
+            second = second < 10? '0' + second : second
+            
+            return hr + ':' + min + ':' + second;
+
+        }
+        console.log(getTime());
+         
+    </script>
+</head>
+<body>
+    
+</body> 
+</html>

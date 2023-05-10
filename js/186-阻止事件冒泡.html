@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: pink;
+            overflow: hidden;
+        }
+
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            line-height: 200px;
+            margin: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        //常見事件對象的屬性和方法
+        //阻止冒泡 dom推薦的標準 stopPropagation()
+         var son = document.querySelector('.son');
+        son.addEventListener('click',function(e){
+            alert('son')
+            e.stopPropagation()
+            e.cancelBubble = true //非標準寫法
+        }, false); 
+
+
+        var father = document.querySelector('.father');
+        father.addEventListener('click',function(e){
+            alert('father');
+            e.stopPropagation()
+        }, false); 
+
+        document.addEventListener('click', function(){
+            alert('document')
+        })
+    </script>
+</body> 
+</html>

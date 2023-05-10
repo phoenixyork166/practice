@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用對象字面量創建對象{}
+        //var obj = {}; //創建了一個空的對象
+        var obj = {
+            uname: 'mai',
+            age: 1,
+            sex: 'male',
+            sayHi: function(){
+                console.log('515151~');
+            }
+        }
+        //(1) 裡面的屬性或者方法我們採用鍵值對的形式 鍵 屬性名： 值 屬性
+        //(2) 多個屬性或者方法中間用逗號隔開
+        //(3) 方法冒號後面跟的是一個匿名函數
+
+        //2. 使用對象
+        //(1) 調用對象的屬性，我們採取 對象名.屬性名
+        console.log(obj.uname); //mai
+        //(2) 調用屬性的另一個方法 對象名['屬性名']
+        console.log(obj['age']); //1
+        //(3) 調用對象的方法 對象名.方法名
+        obj.sayHi()
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

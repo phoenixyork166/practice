@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 求1~100 之間所有偶數的和
+        var sum = 0;
+        for (var i = 0; i <= 100; i++) {
+           if (i % 2 == 0) {
+                sum += i;
+           }
+           
+        }
+        console.log(sum);
+
+        //2. 求100以內7倍數的總和
+        var sum7 = 0;
+        for (var i = 1; i <= 100 ; i++) {
+            if (i % 7 == 0) {
+                sum7 += i;
+            }
+            
+        }
+        console.log(sum7);
+
+        //3. 用for 打印矩形
+        var str = '';
+        for (var i = 1; i <= 5 ; i++) {
+            for (var j = 1; j <= 5; j++) {
+
+                str = str + '❤'    
+            }
+            str = str + '\n';
+        }
+        console.log(str);
+
+        //4. 用for循環打印三角形
+        var love = '';
+        for (var a = 1; a <= 5; a++) {
+            for (var b = 1; b <= a; b++) {
+                love = love + '❤' 
+            }
+            love = love + '\n'
+        }
+        console.log(love);
+
+        //5.登入界面
+        var username = prompt('請輸入用戶名')
+        var password = prompt('請輸入密碼')
+        while (username !== 'admin' || password !== '123456') {
+            var username = prompt('請輸入用戶名')
+        var password = prompt('請輸入密碼')
+        }
+
+        //求1 ~ 100的累加數，但所有個位數為3的數字
+        var sum3 = 0;
+        for (var number = 0; number <= 100; number++) {
+            if (number == 3 || number % 10 == 3) {
+                continue;
+            }
+            sum3 += number;
+        }
+        console.log(sum3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

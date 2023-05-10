@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        span{
+            position: absolute;
+            left: 0;
+            top: 200px;
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <button>start</button>
+    <div></div>
+    <span></span>
+    <script>
+       
+        //元素必須加定位 才能使用element.style.left
+        //簡單封裝動畫函數 目標對象，目標位置
+        //給不同的元素指定了不同的定時器
+        //當不斷點擊按鈕，這個元素的速度會越來越快，因為開啟了太多的定時器
+        function animate(obj, target) {
+            //先把原先的定時器清除，再開啟一個新的定時器，讓當前只有一個定時器運行
+            clearInterval(obj.timer)
+            obj.timer = setInterval(function() {
+            if(obj.offsetLeft >= target){ //停止動畫
+                clearInterval(obj.timer)
+            }
+            obj.style.left = obj.offsetLeft + 2 +'px'
+        },30)
+        }
+        var div = document.querySelector('div'); 
+        animate(div,300);
+        var span = document.querySelector('span')
+        var btn = document.querySelector('button')
+        btn.addEventListener('click',function(){
+            animate(span,200)
+        })
+        
+       
+    </script>
+</body>
+</html>

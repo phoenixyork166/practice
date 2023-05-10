@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotateY</title>
+    <style>
+        body {
+            /* 需要透過透視實現立體視覺 */
+            perspective: 500px;
+        }
+        img {
+            display: block;
+            margin: 100px auto;
+            transition: all 1s;
+
+        }
+
+        img:hover {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="../image/220px-Two_Adult_Guinea_Pigs_(cropped).jpg" alt="">
+</body>
+</html>

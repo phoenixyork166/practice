@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <p>
+        我是文字
+        <span>123</span>
+    </p>
+    <script>
+    //innerText 和 innerHTML 的區別
+    //1.  innerText 不識別html標籤 裡面的標籤會直接顯示 非標準
+    var div = document.querySelector('div')
+/*     div.innerText = '<strong>今天 是</strong> 2022年' */
+    //2. innerHTML 可識別html標籤 同時保留空格和換行 W3C標準 
+    div.innerHTML = '<strong>今天是</strong> 2022年'
+
+    // 這兩個屬性是可讀寫的 可以獲取元素裡面的內容
+    var p = document.querySelector('p')
+    console.log(p.innerText); //我是文字 123
+    console.log(p.innerHTML); 
+      /*     我是文字
+             <span>123</span>
+      */
+
+    
+
+
+    </script>
+    
+</body> 
+</html>

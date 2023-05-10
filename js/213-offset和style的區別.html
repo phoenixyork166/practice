@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        //offset和style的區別
+        var box = document.querySelector('.box');
+        console.log(box.offsetWidth);//200 得到的是數值 沒有單位 而且包括padding和border
+        console.log(box.style.width);//無法輸出 style只能得到行內樣式表中的數值 得到的帶單位 不包括padding和border
+        //offset適用於獲取元素大小，style用於修改元素樣式
+
+    </script>
+</body>
+</html>

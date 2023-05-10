@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //作用域鏈
+        var num = 10;
+        function fn() { //外部函數
+            var num = 20;
+            function fun() { //內部函數
+                //新的作用域鏈
+                //內部函數可以訪問外部函數
+                console.log(num);  //此處num = 20；
+                //採用鏈式查找，訪問外部函數的變量，決定取那個值
+            }
+            fun()
+        }
+        fn()
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

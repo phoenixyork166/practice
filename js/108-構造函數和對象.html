@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //構造函數和對象
+        //1. 構造函數 豬豬 不是一個具體對象 是泛指的某一大類 它類似於java語言裡的 class(類)
+        function Pig(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(song){
+                console.log(song);
+            }
+
+        }
+
+        //2. 對象 特指 是一個具體的事物 
+        // mai = Pig {name: 'mai', age: 1, sex: 'male', sing: ƒ}
+        var mai = new Pig('mai', 1, 'male')
+        console.log(mai);
+
+        //3 利用構造函數用戶創造對象的過程 稱為 對象的實例化
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

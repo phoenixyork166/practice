@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        *{
+        /* 初始化設置標準 */
+        margin: 0;
+        padding: 0;
+        }
+
+        .content{
+            width: 100vw;
+            height: 100vh;
+            /* background-color: aquamarine; */
+            background: url(guineapig1.jpg) no-repeat;
+            /* 背景大小 */
+            background-size: cover;
+            /* 弹性布局 水平垂直居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .login-content{
+            position: relative;
+            width: 800px;
+            height: 360px;
+            background: linear-gradient(to right, rgb(95, 177, 27),rgb(211, 236, 70),rgb(102, 212, 68));
+            border-radius: 30px;
+            padding: 30px;
+        
+        }
+
+        .reg_content{
+            display: none;
+            position: relative;
+            width: 800px;
+            height: 360px;
+            background: linear-gradient(to right, rgb(70, 230, 236),rgb(78, 230, 136),rgb(243, 240, 47));
+            border-radius: 30px;
+            padding: 30px;           
+        }
+
+        .banner_box_login{
+            display: inline-block;
+            width: 500px;
+            height: 100%;
+            background: url(guineapig1.jpg) no-repeat;
+            background-size: cover;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .banner_box_reg{
+            display: inline-block;
+            width: 500px;
+            height: 100%;
+            background: url(guineapig.jpg) no-repeat;
+            background-size: cover;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .login_box{
+            width: 330px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 0 30px 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .reg_box{
+            width: 330px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 0 30px 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login_box>h1 {
+            font-size: 36px;
+            margin: 60px 0;
+            color: #fff;
+        }
+
+        .reg_box>h1 {
+            font-size: 36px;
+            margin: 40px 0;
+            color: #fff;
+        }
+
+        .login_box>input{
+            margin-bottom: 20px;
+            width: 200px;
+            height: 40px;
+            padding: 0 20px;
+            border-radius: 40px;
+            border: none;
+            /* 消除點擊時的提示框 */
+            outline: none;
+            font-size: 20px;
+        }
+
+        .reg_box>input{
+            margin-bottom: 20px;
+            width: 200px;
+            height: 40px;
+            padding: 0 20px;
+            border-radius: 40px;
+            border: none;
+            /* 消除點擊時的提示框 */
+            outline: none;
+            font-size: 20px;
+        }
+
+        .reg_box>span {
+            margin-top: -10px;
+            width: 200px;
+            height: 40px;
+        }
+    
+
+        .btn{
+            display: flex;
+            justify-content: space-between;
+            width: 240px;
+            height: 100%;
+            
+        }
+        .login_btn{
+            margin-top: 20px;
+            width: 100px;
+            height: 40px;
+            background-color:rgb(95, 177, 27);
+            border: none;
+            border-radius: 40px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .reg_btn{
+            margin-top: 20px;
+            width: 100px;
+            height: 40px;
+            background-color: rgb(226, 197, 30);
+            border: none;
+            border-radius: 40px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 900px) {
+            .login-content, .reg_content{
+                margin: 0 30px;
+            }
+            .banner_box_login, .banner_box_reg{
+                border-radius: 20px;
+
+            }
+            .login_box{
+                background-color:  rgba(95, 177, 27, 0.5);
+            }
+
+            .reg_box {
+                background-color: rgba(29, 216, 122, 0.5);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .content {
+                background: url(guineapig1.jpg) no repeart center;
+
+            }
+
+            .login-content, .reg_content{
+                background-color: transparent;
+            }
+
+            .banner_box_login, .banner_box_reg{
+                display: none; 
+            }
+            .login_box, .reg_box{
+                position: initial;
+                margin: -40 auto;
+                background-color: transparent;                        
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="login-content">
+            <a href="javascript:;" class="banner_box_login"></a>
+            <div class="login_box">
+                <h1>賬號登錄</h1>
+                <input type="text" class="login_acct
+                " placeholder="請輸入賬號">
+                <input type="password" class="login_pw" placeholder="請輸入密碼">
+                <div class="btn">
+                    <button class="login_btn">登錄</button>
+                    <button class="reg_btn">註冊</button>
+                </div>                
+            </div>
+        </div>
+
+        <div class="reg_content">
+            <a href="javascript:;" class="banner_box_reg"></a>
+            <div class="reg_box">
+                <h1>賬號註冊</h1>
+                <input type="text" class="reg_acct
+                " placeholder="請輸入6-9位賬號">
+                <input type="password" class="reg_pw" placeholder="請輸入8-14位密碼">
+                <input type="password" class="confirm_pw" placeholder="再次輸入密碼">
+               <span>
+                <input type="checkbox" name="" id=""> <a href="javascript:;">已閱讀及同意用戶條款</a>
+               </span>
+                <div class="btn">
+                    <button class="login_btn">登錄</button>
+                    <button class="reg_btn">註冊</button>
+        
+                </div>                
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        var content = document.querySelector('.content')
+        var login_box = document.querySelector('.login_box')
+        var reg_box = document.querySelector('reg_box')
+        var reg_btn = document.querySelector('.reg_btn');
+        var login_content = document.querySelector('.login-content')
+        var reg_content = document.querySelector('.reg_content')
+        var reg_acct = document.querySelector('.reg_acct');
+        var reg_pw = document.querySelector('.reg_pw');
+        var login_btn = document.querySelectorAll('.login_btn');
+
+        reg_btn.addEventListener('click', function(){
+           reg_content.style.display = 'block'
+           login_content.style.display = 'none'
+           content.style.background = 'url(guineapig.jpg) no-repeat';
+           content.style.backgroundSize = 'cover';
+           login_btn[1].innerHTML = '已有賬戶';
+           
+        })
+        login_btn[1].addEventListener('click', function(){
+            login_content.style.display = 'block'
+           reg_content.style.display = 'none'
+           content.style.background = 'url(guineapig1.jpg) no-repeat';
+           content.style.backgroundSize = 'cover';
+           login_btn[0].innerHTML = '登錄'
+
+        })
+
+    </script>
+    
+   
+
+</body>
+</html>

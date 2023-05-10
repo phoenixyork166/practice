@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. setTimeout
+        //2.window.setTimeout(調用函數，延遲毫秒數)
+        //3.延遲數可以省略 默認是0
+        //4.調用函數可以直接寫函數 或者寫函數名 或者 '函數名()'(不提倡)
+        //4. 頁面中可能有很多的定時器，我們經常給定時器加標識符（名字）
+        /* setTimeout(function(){
+            alert('timeout')
+        }, 2000) */
+        function callback () {
+            alert('timeout')        
+        }
+        var timer1= setTimeout(callback, 3000);
+        var timer2 = setTimeout(callback, 5000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    height: 2000px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.search-index {
+    display: flex;
+    /* 固定定位不以父級為參考，以屏幕為主 */
+    position: fixed;
+    top:0;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    /* 因此需單獨設定寬度 */
+    min-width: 320px;
+    max-width: 540px;
+    height: 44px;
+    background-color: #f6f6f6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-index .user {
+    width: 44px;
+    height: 44px;
+    /* background-color: #fff; */
+    text-align: center;
+    font-size: 12px;
+    color: #2eaae0;
+
+}
+
+.user::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/sprite.png) no-repeat -59px -194px;
+    background-size: 104px auto;
+    margin: 4px auto -2px;
+}
+
+.search-index .search {
+    flex:1;
+    position: relative;
+    height: 26px;
+    line-height: 24px;
+    border: 1px solid #ccc;
+    margin: 7px 10px;
+    border-radius: 5px;
+    padding-left: 25px;
+    color: #666;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.search::before { 
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+}
+
+/* 因頂端搜索欄是固定定位，不佔位置，因此需要為焦點圖加上margin，以免部分圖片被頂端搜索欄遮蓋 */
+.focus {
+    margin-top: 44px;
+}
+.focus img {
+    width: 100%;
+    
+}
+
+.local-nav {
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 3px 4px;;
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+.local-nav li a {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     font-size: 12px;
+     
+}
+
+.local-nav li a [class^="local-nav-icon"] 
+{
+    width: 32px;
+    height: 32px;
+    background-color: #2eaae0;
+    margin-top: 8px;
+    background: url(../images/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+
+.local-nav li a .local-nav-icon2 {
+    background-position: 0 -32px;
+}
+
+.local-nav li a .local-nav-icon3 {
+    background-position: 0 -64px;
+}
+
+.local-nav li a .local-nav-icon4 {
+    background-position: 0 -96px;
+}
+
+.local-nav li a .local-nav-icon5 {
+    background-position: 0 -128px;
+}
+
+nav {
+    /* 顯示小圓角 */
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+
+.nav-common {
+    display: flex;
+    height: 88px;
+    background-color: #2eaae0;
+}
+
+.nav-common:nth-child(2) {
+    margin: 3px 0; 
+}
+
+.nav-common .nav-items {
+    flex: 1;
+}
+
+.nav-common .nav-items:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}       
+
+.nav-common .nav-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-items a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    font-size: 14px;
+    color: #fff;
+    /* 文字陰影 */
+    text-shadow: 1px 1px rgba(0,0,0,.2);
+}
+
+.nav-items a:nth-child(2n) {
+    border-top: 1px solid #fff;
+}
+
+.nav-items:first-child a {
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994D);
+}
+
+.nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #4B90ED, #53BCED);
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34C2A9, #6CD559);
+}
+
+.subnav-entry {
+    display: flex;
+    /* 因默認為一行內顯示，因此需換行 */
+    flex-wrap: wrap;    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+}
+
+.subnav-entry li {
+    /* flex也可以%表示 */
+    flex:20%;
+}
+
+.subnav-entry li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.subnav-entry li a [class^="subnav-entry-icon"]{
+   width: 28px;
+   height: 28px;
+   margin-top: 4px;
+   background: url(../images/subnav-bg.png) no-repeat 0 0;
+   background-size: 28px;
+}
+
+.subnav-entry li a .subnav-entry-icon2 {
+    background-position: 0 -28px;
+}
+
+.subnav-entry li a .subnav-entry-icon3 {
+    background-position: 0 -60px;
+}
+
+.subnav-entry li a .subnav-entry-icon4 {
+    background-position: 0 -95px;
+}
+
+.subnav-entry li a .subnav-entry-icon5 {
+    background-position: 0 -125px;
+}
+
+.subnav-entry li a .subnav-entry-icon6 {
+    background-position: 5px -160px;
+}
+
+.subnav-entry li a .subnav-entry-icon7 {
+    background-position: 0 -196px;
+}
+
+.subnav-entry li a .subnav-entry-icon8 {
+    background-position: 0 -226px;
+}
+.subnav-entry li a .subnav-entry-icon9 {
+    background-position: 0 -256px;
+}
+.subnav-entry li a .subnav-entry-icon10 {
+    background-position: 5px -286px;
+}
+
+.sales-box {
+    border-top: 1px solid #bbb;
+    background-color: #fff;
+    margin: 4px;
+}
+
+.sales-hd {
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2{
+    position: relative; 
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.sales-hd h2::after {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    content:"";
+    width: 79px;
+    height: 15px;
+    background: url(../images/hot.png) no-repeat 0 -20px;
+    background-size: 79px auto;;
+}
+
+.sales-hd .more {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    background: -webkit-linear-gradient(left, #FF506C, #ff6bc6);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    color: #fff;
+
+}
+
+.sales-hd .more::after {
+    position: absolute;
+    content: "";
+    top: 9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.sales-bd .row {
+    display: flex;
+}
+
+.sales-bd .row a {
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.sales-bd .row a:nth-child(1) {
+    border-right: 1px solid #ccc;
+}
+
+.row a img {
+    width: 100%;
+} 
+
+.footer {
+    display: flex;
+}
+
+.footer li {
+    flex: 1;
+}
+

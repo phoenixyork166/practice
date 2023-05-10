@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>溢出文本用省略號顯示</title>
+    <style>
+        .singleline {
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 默認換行 */
+            /* white-space: normal; */
+            /* 1. 強制一行內顯示 */
+            white-space: nowrap;
+            /* 2. 溢出部分隱藏 */
+            overflow: hidden;
+            /* 3. 溢出部分用省略號顯示 */
+            text-overflow: ellipsis;
+        }
+
+        .more {
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 彈性伸縮盒子模型顯示 */
+            display: -webkit-box;
+            /* 在第幾行顯示省略號。 */
+            -webkit-line-clamp: 4;
+            /* 設置或檢索伸縮盒子元素的顯示方式 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="singleline">
+        此處省略一萬字,此處省略一萬字
+    </div>
+
+    <div class="more">
+        此處省略一萬字,此處省略一萬字.此處省略一萬字,此處省略一萬字,此處省略一萬字.此處省略一萬字,
+    </div>
+</body>
+
+</html>

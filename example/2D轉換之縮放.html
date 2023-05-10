@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D轉換之縮放</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: palegreen;
+            margin: 100px auto;
+            /* 設置縮放中心點 */
+            transform-origin: left bottom;
+            transition: all 0.3s;
+        }
+ 
+
+        div:hover {
+            /* transform: scale(1.5,1.5); */
+            /* 寬度為原來的2倍，高度不變 */
+            /* transform: scale(2,1); */
+            /* 等比例縮放： */
+            transform: scale(0.5);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

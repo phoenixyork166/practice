@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景縮放</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+            background: url(../example/images/dog.jpg) no-repeat;
+            /* background-size: 500px 200px; */
+            /* background-size: 500px; */
+            /* 父盒子的一半 */
+            /* background-size: 50%; */
+            /* cover完全覆蓋盒子，可能有部分背景圖片顯示不全 */
+            /* background-size: cover; */
+            /* contain把圖像擴展至最大尺寸，使其寬度和高度完全適應內容區域 */
+            background-size: contain;
+        }   
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

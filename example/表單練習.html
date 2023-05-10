@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單練習</title>
+    <style>
+        h4 {
+            font-size: 18px;
+            color: pink;
+            text-shadow: 2px 2px 4px pink;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <h4>天竺鼠註冊</h4>
+        </thead>
+        <tbody>
+            <form action="demo.php" method="get" name="練習">
+                <tr>
+                    <td><label for="姓名">姓名：</label></td>
+                    <td><input type="text" name="姓名" id="姓名"></td>
+                </tr>
+                <tr>
+                    <td> 性別：</td>
+                    <td><input type="radio" name="sex" value="男" id="male" checked="checked"><label for="male">男</label>
+                        <input type="radio" name="sex" value="女" id="female"><label for="female">女</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>生日：</td>
+                    <td>
+                        <select>
+                            <option selected="selected">--請選擇年--</option>
+                            <option>2022年</option>
+                            <option>2021年</option>
+                            <option>2020年</option>
+                            <option>2019年</option>
+                        </select>
+                        <select>
+                            <option selected="selected">--請選擇月--</option>
+                            <option>6月</option>
+                            <option>7月</option> 
+                            <option>8月</option>
+                            <option>9月</option>
+                        </select>
+                        <select>
+                            <option selected="selected">--請選擇日--</option>
+                            <option>5日</option>
+                            <option>6日</option>
+                            <option>7日</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="add">所在地區：</label></td>
+                    <td><input type="text" value="觀塘" name="地址" id="add"></td>
+                </tr>
+                <tr>
+                    <td>喜歡的食物：</td>
+                    <td>
+                        <label for="草"> 提摩西草</label> <input type="checkbox" name="食物" value="食物" id="草"
+                            checked="checked">
+                        <label for="黃瓜">黃瓜</label> <input type="checkbox" name="食物" value="食物" id="黃瓜">
+                        <label for="青椒">青椒</label> <input type="checkbox" name="食物" value="食物" id="青椒">
+                        <label for="藍莓">藍莓</label> <input type="checkbox" name="食物" value="食物" id="藍莓">
+                        <label for="其他"> 其他:&nbsp;</label><input type="text" name="食物" id="其他">
+                    </td>
+                </tr>
+                <tr>
+                    <td>品種：</td>
+                    <td>
+                        <select>
+                            <option selected="selected">阿比西尼亞</option>
+                            <option>英式</option>
+                            <option>美式</option>
+                            <option>美麗諾</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>自我介紹</td>
+                    <td><textarea>我叫糯米糍...
+        </textarea></td>
+                </tr>
+                <tr>
+                    <td>上傳照片：</td>
+                    <td><input type="file"></td>
+                </tr>
+            </form>
+            <tr>
+                <td>輸入驗證碼：</td>
+                <td><input type="text">&nbsp;<input type="button" value="獲取驗證碼"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" checked="checked" value="條款">我同意<a href=超鏈接頁面及錨點鏈接.html>註冊條款</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="完成註冊"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h5>我承諾</h5>
+                    <ul>
+                        <li>乖乖飲水食草</li>
+                        <li>唔發脾氣咬人</li>
+                        <li>日日開開心心</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

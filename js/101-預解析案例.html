@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //案例1
+        var num = 10;
+        fun();
+        function fun() {
+            console.log(num);
+            var num = 20;
+        }
+        //相當於執行以下操作
+        /* var num;
+        function fun() {
+            var num //為賦值
+            console.log(num);//根據作用域鏈就近原則，最近為 var num 未賦值，因此此處是undefined
+            num = 20;
+        }
+        num = 10;
+        fun(); //underfined */
+
+        //案例2
+        var num = 10;
+        function fn() {
+            console.log(num);
+            var num = 20;
+            console.log(num);
+
+            // 相當於:
+            // var num
+            // console.log(num); //undefined
+            // num = 20;
+            // console.log(num); //20
+        }
+        fn() //20
+
+        //案例3
+        // var a = 18;
+        // f1(); //underfined //9
+        // function f1() {
+        //     var b = 9;
+        //     console.log(a);
+        //     console.log(b);
+        //     var a = '123';
+            
+        // }
+
+        //案例4
+        f1();
+        console.log(c); //9
+        console.log(b); //9
+        console.log(a); //undefined
+        function f1() {
+            var a = b = c = 9;
+            console.log(a); //9
+            console.log(b); //9
+            console.log(c); //9
+        }
+        //以下代碼
+        function f1() {
+            var a;
+            a = b = c = 9;
+            //相當於 var a = 9; b = 9; c = 9; b和c的前面沒有var聲明 因此當全局變量看
+            //集體聲明 var a = 9, b = 9, c = 9
+            console.log(a); //9
+            console.log(b); //9
+            console.log(c); //9
+        }
+        f1();
+        console.log(c); //9 c是全局變量
+        console.log(b); //9 b也是全局變量
+        console.log(a); //undefined 因a在函數中，屬於局部變量
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

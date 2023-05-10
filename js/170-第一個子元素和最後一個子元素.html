@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>我是li1</li>
+        <li>我是li2</li>
+        <li>我是li3</li>
+        <li>我是li4</li>
+    </ol>
+
+    <script>
+        var ol = document.querySelector('ol');
+        //firstChild 獲取第一個子節點（包括文本節點
+        console.log(ol.firstChild);//#text
+        console.log(ol.lastChild); //#text
+
+        //firstElementChild lastElementChild 找不到則返回null
+        console.log(ol.firstElementChild); //li 
+        console.log(ol.lastElementChild); //li
+
+        //實際開發寫法
+        console.log(ol.children[0]);
+        console.log(ol.children[ol.children.length - 1]);
+        
+
+
+    </script>
+</body>
+</html>

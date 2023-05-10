@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. concat
+        var str = 'red';
+        console.log(str.concat('pink')); //redpink
+
+        //2. substr(start,length)
+        var str1 = '床前明月光，疑是地上霜'
+        console.log(str1.substr(0,5)); //床前明月光
+
+        //3. replce('被替換的字符'， '替換為的字符') //只會替換第一個字符
+        var str2 = 'pink';
+        console.log(str2.replace('p','w')); //wink
+        //把'abcoefoxyozzopp'中所有的'o' 替換為'*';
+        var str3 = 'abcoefoxyozzopp';
+        
+        while (str3.indexOf('o') !== -1){
+        str3 = str3.replace('o', '*')
+        }
+        console.log(str3);//abc*ef*xy*zz*pp
+
+        //4. 字符轉換為數組 split('分隔符') 以一个指定的分割字串来决定每个拆分的位置。
+        var str4 = 'red, pink, blue';
+        console.log(str4.split(','));//['red', ' pink', ' blue']
+        var str5 = 'mai&bear&b女&go'
+        console.log(str5.split('&'));
+        //abc*ef*xy*zz*pp
+
+        //5. toUpperCase(); 返回值為一个新的字符串，表示转换为大写的调用字符串。
+        console.log(str4.toUpperCase()); //RED, PINK, BLUE
+
+        //5. toUpperCase(); 返回值為一个新的字符串，表示转换为小写的调用字符串。
+        //6. toLowerCase(); 
+        var str6 = 'BLUE,SLIVER,GOLD'
+        console.log(str6.toLowerCase()); //blue,sliver,gold
+
+
+
+        
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

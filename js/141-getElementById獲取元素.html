@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time">2022-08-29</div>
+    <script>
+        //1.因為文檔頁面從上往下加載，因此需要先有標籤
+        //2.get 獲得 element 元素 by通過 駝峰命名法 大小寫
+        //3.參數 id是大小寫敏感的字符串
+        //4.返回的是符合id的元素對象
+        var timer = document.getElementById('time')
+        console.log(timer); 
+        //<div id="time">2022-08-29</div>
+        console.log(typeof timer); //object
+        console.dir(timer); //div#time 打印我們返回的元素對象，更好地查看裡面的屬性和方法
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮動佈局練習</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 1200px;
+            height: 460px;
+            background-color: pink;
+            margin: auto;
+        }
+
+        .nav {
+            float: left;
+            width: 230px;
+            height: 460px;
+            background-color: gray;
+        }
+
+        .banner {
+            float: left;
+            width: 970px;
+            height: 460px;
+            background-color: yellowgreen;
+        }
+
+        .box2 {
+            width: 1226px;
+            height: 285px;
+            background-color: pink;
+            margin: auto;
+        }
+
+        li {
+            float: left;
+            width: 296px;
+            height: 285px;
+            background-color: cornflowerblue;
+            margin-right: 14px;
+
+        }
+
+        .last {
+            margin-right: 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="nav"></div>
+        <div class="banner"></div>
+
+    </div>
+    <br>
+
+    <ul class="box2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last">4</li>
+    </ul>
+
+</body>
+
+</html>

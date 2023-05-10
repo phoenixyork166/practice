@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素顯示模式</title>
+    <style>
+        /* 塊元素可直接設置寬高 */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 行內元素不能直接設置寬高 */
+        span {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        a {
+            width: 150px;
+            height: 50px;
+            background-color: coral;
+            /* 把行內元素轉換成塊元素 */
+            display: block
+        }
+
+        .inline {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            /* 塊元素轉換為行內元素 寬高度設置無效 */
+            display: inline;
+        }
+
+        .inlineblock {
+            width: 150px;
+            height: 80px;
+            background-color: #645e5b;
+            line-height: 80px;
+            /* 設置為行內塊元素，可設置高寬度，一行可放多個 */
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 塊元素 -->
+    <div>塊元素。自己占一行</div>
+    其他元素另起一行顯示<br>
+    <p></p>
+    <!-- 行內元素可於一行上放多個 -->
+    <span>span</span> <strong>strong</strong> <span>span</span> <strong>strong</strong> <br>
+    <p></p>
+    <input type="text">
+    <input type="text">
+    <P> </P>
+    <!-- 顯示模式的轉變 -->
+    <a href="#">ABCD</a>
+    <p></p>
+    <div class="inline">DEFG</div>
+    <p></p>
+    <span class="inlineblock">123456</span>
+    <span class="inlineblock">123456</span>
+    <span class="inlineblock">123456</span>
+
+
+
+</body>
+
+</html>

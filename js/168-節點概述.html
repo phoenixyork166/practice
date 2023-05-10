@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>div</div>
+    <span>span</span>
+    <ul>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+    </ul>
+    <div class="demo">
+    <div class="box">
+        <span class="qrcode">x</span>
+    </div>
+</div>
+
+    <script>
+       var box = document.querySelector('.box');
+       console.dir(box);
+
+       //元素節點 nodeType 為 1
+       //屬性節點 nodeType 為 2
+       //文本節點 nodeType 為 3(文本節點包括文字，空格，換行等)
+
+       //節點操作主要為 元素節點
+
+       //1.父節點 parentNode
+       var qrcode = document.querySelector('.qrcode');
+       //得到離元素最近的父級節點 如找不到父節點就會返回 空 null
+       console.log(qrcode.parentNode); //div.box
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邊框圓角</title>
+    <style>
+        div {
+            width: 300px;
+            height: 150px;
+            background-color: pink;
+            /* 設置邊框圓角，數值為圓角的半徑長度 */
+            border-radius: 20px;
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            border-radius: 100%;
+        }
+
+        .rectangle {
+            width: 300px;
+            height: 150px;
+            background-color: skyblue;
+            /* 如果需要製作一個圓角矩形，則把半徑設置為高度的一半便可 */
+            border-radius: 75px
+        }
+
+        .different {
+            width: 300px;
+            height: 300px;
+            background-color: coral;
+            /* 圓角邊框復合屬性寫法，由左上角開始，順時針設置 */
+            border-radius: 150px 30px 150px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    圓角邊框
+    <div></div>
+    圓形
+    <div class="circle"></div>
+    圓角矩形
+    <div class="rectangle"></div>
+    設置不同的圓角
+    <div class="different"></div>
+</body>
+
+</html>

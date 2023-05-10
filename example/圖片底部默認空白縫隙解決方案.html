@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片底部空白縫隙解決</title>
+    <style>
+        div {
+            border: 2px solid pink;
+            /* 1. 通過添加vertical align，去除baseline對齊 */
+
+        }
+
+        img {
+            /* 1. 通過添加vertical align，去除baseline對齊 更推薦使用*/
+            vertical-align: bottom;
+            /* 2. 把圖片轉為塊級元素，因為只有行內元素會有vertical align：baseline的默認屬性 */
+            /* display: block; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <img src="..//image/220px-Two_Adult_Guinea_Pigs_(cropped).jpg" alt="">
+    </div>
+
+</body>
+
+</html>

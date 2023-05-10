@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+         }
+
+         .search {
+            position: relative;
+            width: 178px;
+            margin: 100px;
+         }
+
+         .con {
+            display: none;
+            position: absolute;
+            top: -40px;
+            width: 171px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            padding: 5px 0;
+            font-size: 18px;
+            line-height: 20px;
+            color: #333;
+         }
+
+         .con::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 28px;
+            left: 18px;
+            border: 8px solid #000;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+         }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <div class="con">123</div>
+        <input type="text" placeholder="请输入您的快递单号" class="jd">
+
+        <script>
+            var con = document.querySelector('.con');
+            var jd_input = document.querySelector('.jd');
+            jd_input.addEventListener('keyup', function(){
+            if(this.value == ''){
+             con.style.display = 'none'} else{
+                con.innerHTML = this.value;
+            con.style.display = 'block'
+             }        
+            })
+
+            //當失去焦點就 隱藏con盒子
+            jd_input.addEventListener('blur', function(){
+                con.style.display = 'none'
+            })
+
+            jd_input.addEventListener('focus', function(){
+                if(this.value !== ''){
+                    con.style.display = 'block'
+                }
+            })
+            //此處用keyup 因為keydown和keypress在文本框裡面的特色，他們兩個事件觸發的時候，文字還沒有落入文本框中，keyup則會。因為前一個案例使用keydown以免按s時同時在搜索欄中也輸入s，此處則使用有keyup，ps press不適用於功能鍵
+
+        </script>
+    </div>
+</body>
+</html>

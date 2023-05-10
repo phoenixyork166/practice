@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 900px;
+            height: 300px;
+            background-color: paleturquoise;
+            /* 默認主軸為x軸row */
+            /* flex-direction: row; */
+            /* 靠右對齊 */
+            /* justify-content: flex-end ; */
+            /* 子元素居中對齊 */
+            /* justify-content: center; */
+            /* 盒子平均分配空間 */
+            /* justify-content: space-around; */
+            /* 兩邊貼邊，剩餘盒子平分剩餘空間 */
+            justify-content: space-between;
+
+        }
+
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: peachpuff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        
+    </div>
+</body>
+</html>

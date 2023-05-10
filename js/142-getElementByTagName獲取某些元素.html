@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>知否知否，應是綠肥紅瘦1</li>
+        <li>知否知否，應是綠肥紅瘦2</li>
+        <li>知否知否，應是綠肥紅瘦3</li>
+        <li>知否知否，應是綠肥紅瘦4</li>
+        <li>知否知否，應是綠肥紅瘦5</li>       
+    </ul>
+    <ol id="ol">
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+
+
+    <script>
+        //1. 返回的是獲取過來元素對象的集合以偽數組的形式存儲
+       var lis = document.getElementsByTagName('li');
+       console.log(lis); //HTMLCollection(5) [li, li, li, li, li] 
+       console.log(lis[0]);//知否知否，應是綠肥紅瘦1
+       //2. 想要依次打印裡面的元素對象，可以透過遍歷
+       //3. 得到的元素對象是動態的（元素改動時，返回值也會改動）
+       //4. 如果頁面中只有一個指定標籤，返回的還是會偽數組的元素
+       //5. 如果頁面中沒有符合指定標籤的元素，返回會是一個空的偽數組
+    
+       for(var i = 0; i < lis.length;i++){
+           console.log(lis[i]);
+       }
+
+       //6. 還可以獲取某個元素（父元素）內部所有指定標籤名的子元素
+       //element.getElementsByTagName() 父元素必須是指定的單個元素
+      /*  var ol = document.getElementsByTagName('ol') //[ol]
+       //ol[0] 指定第一個ol為父元素
+       console.log(ol[0].getElementsByTagName('li')); */
+       var ol = document.getElementById('ol');
+       console.log(ol.getElementsByTagName('li')); //[li, li, li]
+       
+       
+
+
+       
+
+    </script>
+    
+
+</body>
+</html>

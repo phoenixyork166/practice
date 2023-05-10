@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. Math對象隨機數方法 random()返回一個隨機的小數 0 <= x <1
+        //2. 這個方法中沒有參數
+        //3. 代碼
+        console.log(Math.random()); //0.0363252738856914.03
+        //4. 想得到兩個數之間的隨機正數 並且包含這兩個整數
+        //Math.floor(Math.random() * (max - min + 1) + min)
+        function getRandom(min,max){
+           
+           return Math.floor(Math.random() * (max - min + 1) + min)
+
+        }
+
+        console.log(getRandom(1,10));
+
+        //5. 隨機點名
+        var array = ['mai', 'bearbear', 'gogo', 'b女']
+        function getRandom(min,max){
+           
+           return Math.floor(Math.random() * (max - min + 1) + min)
+
+        }
+        console.log(array[getRandom(0,array.length - 1)]);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

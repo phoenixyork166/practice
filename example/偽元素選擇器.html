@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>偽元素選擇器</title>
+    <style>
+        @font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?33i6jb');
+  src:  url('fonts/icomoon.eot?33i6jb#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?33i6jb') format('truetype'),
+    url('fonts/icomoon.woff?33i6jb') format('woff'),
+    url('fonts/icomoon.svg?33i6jb#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: oldlace;
+        }
+
+        /* div::before { */
+            /* 由於偽元素為行內元素，如果要設置寬高，需要轉換形態 */
+            /* display: inline-block; */
+            /* 必須有content */
+            /* content: 'before'; */
+            /* width: 100px; */
+            /* background-color: aqua; */
+        
+
+        /* div::after { */
+            /* content: 'after'; */
+        
+
+        .logo {
+            position: relative;
+            width: 200px;
+            height: 35px;
+            border: solid 1px red;
+            background-color: white;
+        }
+
+        .logo::before {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'icomoon';
+            content: '' ;
+            color: palevioletred;
+            font-size: 18px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        yes
+    </div>
+
+    <div class="logo">
+
+    </div>
+    
+</body>
+</html>

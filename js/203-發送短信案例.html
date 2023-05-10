@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"> 
+    <button>發送</button>
+    <script>
+        var button = document.querySelector('button');
+        //設置到時秒數
+        var time = 3
+        button.addEventListener('click',function(){
+            button.disabled = true;
+            var timer =  setInterval(function(){
+                if (time == 0) {
+                    //停止定時器
+                    clearInterval(timer)
+                    //復原按鍵功能
+                    this.disabled = false;
+                    //復原按鍵文字內容
+                    button.innerHTML = '發送'
+                    //復原定時器時間，待下次再點擊時，才能重新開始倒數  
+                    time = 3
+                } else {                   
+                    this.innerHTML = '還剩下'+ time + '秒';
+                time--
+                }
+            },1000)                       
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佈局技巧1</title>
+    <style>
+        li {
+            float: left;
+            width: 150px;
+            height: 200px;
+            border: 1px solid red;
+            list-style: none;
+            /* 令li之間的邊框重疊 */
+            margin-left: -1px;
+
+        }
+
+        li:hover {
+            /* 鼠標經過時，邊框變為藍色，為了使所有的邊框都變成藍色，和避免margin-left：-1px的影響，需要提升元素的層級， */
+            /* 方法一：可使用相對定位（提升了層數，並保留位置） */
+            /* position: relative; */
+            /* 方法二：如其他盒子也有定位，可透過z-index提高層數,  */
+            z-index: 1;
+            border-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

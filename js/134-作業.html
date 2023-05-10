@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //求red出現的位置和次數
+        var color = ['red', 'blue', 'orange', 'red', 'green', 'red', 'blue']
+        var index = color.indexOf('red')
+        var num = 0;
+        while (index !== -1) {
+            console.log(index);
+            num++
+            var index = color.indexOf('red', index+1)
+        }
+        
+
+        console.log('red' + '出現的次數為' + num +  '次'  ); //red出現的次數為3次
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

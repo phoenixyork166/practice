@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        div {
+            width: 200px;
+            height: 150px;
+            background-color: yellowgreen;
+            /* 三個div於同一行顯示，若使用標準流的display inline block，盒子之間會有較大空隙，此時可使用float，改變盒子默認的顯示方式 */
+            float: left;
+        }
+
+        .right {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            /* 三個div於同一行顯示，若使用標準流的display inline block，盒子之間會有較大空隙，此時可使用float，改變盒子默認的顯示方式 */
+            /* 如果塊元素沒有設置寬度，默認與父級一樣寬，但添加浮動後，大小則根據內容而決定 */
+            float: right;
+        }
+
+        span {
+            /* 因浮動具備行內塊元素特性，因此即使為行內元素，在使用浮動時，也可直接設置高度 */
+            /* 浮動的盒子之間沒有空隙 */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <div class="right">1</div>
+    <div class="right">2</div>
+    <div class="right">3</div>
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+
+
+</body>
+
+</html>

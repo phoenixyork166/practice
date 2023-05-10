@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emet</title>
+    <style>
+        .season1 {
+            width: 100px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            line-height: 30px;
+            text-decoration: underline;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 1. 生成標籤，只需輸入標籤名，再按tag便可生成 -->
+    <div></div>
+    <table></table>
+
+    <!-- 2. 生成多個同款標籤，標籤*n，n為需要生成的數量 -->
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <!-- 3. 生成父子級關係的標籤，可以用> 如ul>li  -->
+    <ul>
+        <li></li>
+    </ul>
+    <div><span></span></div>
+
+    <!-- 4. 兄弟關係的標籤，用+，如div+p -->
+    <div></div>
+    <p></p>
+
+    <!-- 5. 如果需要生成帶類名或者id名字的，直接寫.demo 或者 #demo 然後tab鍵便可 -->
+    <div class="img"></div>
+    <div id="img"></div>
+    <p class="one"></p>
+    <h1 class="header1"></h1>
+    <!-- ul>li#two  -->
+    <ul>
+        <li id="two"></li>
+    </ul>
+
+    <!-- 6. 若生成的類名有順序,在類名後加$ -->
+    <!-- .demo$*5 -->
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+    <div class="demo3"></div>
+    <div class="demo4"></div>
+    <div class="demo5"></div>
+
+    <!-- 7. 如想要在生成的標籤內寫內容可以用{}表示 -->
+    <!-- div{春夏秋冬}*5 tag -->
+    <div>春夏秋冬</div>
+    <div>春夏秋冬</div>
+    <div>春夏秋冬</div>
+    <div>春夏秋冬</div>
+    <div>春夏秋冬</div>
+    <!-- div{$}*5  -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <!-- ul>li{春夏秋冬}*4  -->
+    <ul>
+        <li>春夏秋冬</li>
+        <li>春夏秋冬</li>
+        <li>春夏秋冬</li>
+        <li>春夏秋冬</li>
+    </ul>
+    <!-- .season$*4{春夏秋冬}  -->
+    <div class="season1">春夏秋冬</div>
+    <div class="season2">春夏秋冬</div>
+    <div class="season3">春夏秋冬</div>
+    <div class="season4">春夏秋冬</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單元素</title>
+</head>
+<body>
+    <form action="demo.php" method="get" name="用戶">
+        <!-- text文本框 用戶可以在裡面輸入任何文字 -->
+        <!-- value是輸入框內顯示的文字 -->
+        <!-- maxlength 限制用戶輸入的最大字符數量 -->
+        <!-- label標籤用於綁定一個表單元素，當點擊label內文本時，瀏覽器會自動把光標移到對應的表單元上 -->
+        <label for="username">用戶名：</label> <input type="text" name=username id="username" value="請輸入用戶名" maxlength="6"> <br/>
+        <!-- password 密碼框 用戶無法看見輸入的文字 -->
+        <label for="pwd">密碼：</label><input type="password" name="pwd" id="pwd" /><br>
+        <!-- name是表單元素名字，這裡性別單選按鈕必須要有相同的名字name 才可以實現多選一 -->
+        <!-- radio 單選按鈕 可實現多選一 -->
+        <!-- 單選按鈕及複選框可以設置checked屬性，頁面打開時。默認選中該選項 -->
+        性別：
+        <input type="radio" name="sex" value="男" id="sexM"> <label for="sexM">男</label>
+        <input type="radio" name="sex" value="女" checked="checked" id="sexF"><label for="sexF"></label>女</label>
+        <input type="radio" name="sex" value="其他" id="other"><label for="other">其他</label> <br>
+        <!-- checkbox 複選框 可以實現多選效果 以正方形框框顯示 -->
+        愛好：<input type="checkbox" name="hobby" value="吃飯" checked="checked">吃飯
+        <input type="checkbox" name="hobby" value="睡覺" checked="checked"> 睡覺 
+        <input type="checkbox" name="hobby" value="看書" checked="checked">看書 <br>
+         <!-- submit鍵可把表單數據傳送給服務器，可透過value設置按鈕內顯示文字 -->
+         <!-- 點擊提交按鈕，可以把表單域裡面的表單元素中的數值交給後台服務器 -->
+         <input type="submit" value="完成註冊"/>
+         <!-- reset可還原表單元素初始默認狀態 -->
+         <input type="reset" value="重置"><br>
+         <!-- button為普通按鈕，通常與JAVASCRIPT搭配使用 -->
+         <input type="button" value="獲取驗證碼"><br>
+         <!-- 文件域 file容許用戶上傳文件 -->
+         上傳照片<input type="file"><br>
+         <!-- 下拉表單元素select標籤，select中至少包含一對option -->
+         <!-- 在option中添加selected="selected",可設置默認項 -->
+         年齡：
+         <select>
+             <option>-----</option>
+             <option selected="selected">18-25</option>
+             <option>26-35</option>
+             <option>36-45</option> 
+
+         </select>
+         <br>自我介紹：
+         <textarea cols="20" rows="5">介紹一下自己吧！ 
+         </textarea>
+        </form>
+    
+</body>
+</html>

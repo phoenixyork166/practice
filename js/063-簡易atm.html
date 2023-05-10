@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //此處不用if 是因為 當有多個可觸發選項時， 用if的話，觸發了當中一個 如 if operation = 1；其他if就會失效
+        var balance = 100;
+        var money = 0;
+      do {
+        var operation = prompt('請輸入你要的操作：' + '\n' + '1.存錢' + '\n' + '2.提款' + '\n' + '3.顯示餘額'+ '\n' + '4. 退出') 
+        switch (operation) {
+            case '1':
+            var money = prompt('請輸入存入數額')
+            balance = parseFloat(money) + balance;
+            alert('現時餘額為' + balance)
+            break;
+            case '2':
+            var money = prompt('請輸入提款數額')
+            if (money > balance) {
+                alert('餘額不足！')
+            } else(balance = balance - money)
+            alert('現時餘額為' + balance);
+            break;
+            case '3':
+            alert('現時餘額為' + balance);
+            break;              
+            case '4':
+            alert('已退出服務');
+            break;
+        }
+      } while (operation !== '4');
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

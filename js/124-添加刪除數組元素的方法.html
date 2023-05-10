@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. push() 在數組末尾添加一個或者多個數組元素
+        var array = [1,2,3];
+        //array.push(4, 'pink');
+        console.log(array.push(4, 'pink')); //5
+
+        console.log(array); //1,2,3,4,'pink'
+        //(1) push 是可以給數組追加新的元素
+        //(2) push() 參數直接寫 數組元素就可以
+        //(3) push完畢之後，返回的結果是 新數組的length
+        //(4) 原數組也會發生變化
+
+        //2. unshift 在數組的開頭 添加一個或者多個數組元素
+        //array.unshift('blue', 0);
+        console.log(array.unshift('blue', 0));//7
+        console.log(array); //['blue',0, 1, 2, 3, 4, 'pink']
+        
+
+        //(1) unshift 是可以給數組追加新的元素
+        //(2) unshift() 參數直接寫 數組元素就可以
+        //(3) unshift完畢之後，返回的結果是 新數組的length
+        //(4) 原數組也會發生變化
+
+
+        //3. pop() 可以刪除數組的最後一個元素
+        //array.pop();
+        console.log(array.pop()); //pink
+        console.log(array);  //'blue', 0, 1, 2, 3, 4  
+        //(1) pop 可以刪除數組的最後一個元素
+        //(2) pop()中沒有參數
+        //(3) pop完畢之後 返回的結果是 被刪除的元素
+        //(4) 原數組也會發生變化
+
+        //4. shift() 刪除數組的第一個元素
+        //array.shift();
+        console.log(array.shift()); //blue
+        console.log(array);//[0, 1, 2, 3, 4]
+        //(1) shift 可以刪除數組的第一個元素
+        //(2) shift()中沒有參數
+        //(3) shift完畢之後 返回的結果是 被刪除的元素
+        //(4) 原數組也會發生變化
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

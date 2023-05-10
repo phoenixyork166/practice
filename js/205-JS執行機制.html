@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //同步任务都在主線程上執行 形成一個執行棧
+        //異步是透過回調函數實現，例如click load setTimeout 放在任務隊列（消息隊列）中
+
+        //1. 先執行 執行棧中的同步任務
+        //2. 把函數先放在任務隊列中
+        //3. 繼續進行 餘下的同步任務
+        //4. 待所有同步任務執行完畢，再到任務隊列中查到是否有任務，如有則執行
+        
+        //5. onlick等需要觸發的函數 如不觸發不會放到異步任務中
+
+        //6. 異步任務執行後會清空任務隊列 
+
+        //7. 主線程不斷重複地從任務隊列中獲取任務，執行任務，再獲取任務，再執行，這種機制被稱為事件循環 event loop
+         
+
+    </script>
+</body>
+</html>

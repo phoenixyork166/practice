@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: pink;
+            overflow: hidden;
+        }
+
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            line-height: 200px;
+            margin: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        //dom事件流 三個階段
+        //1. JS 代碼中只能執行捕獲或者冒泡其中的一個階段
+        //2. onclick 和 attachEvent(ie)只能得到冒泡階段
+        //3. 捕獲階段 如果addEventListener 第三個參數是true，那麼處於捕獲階段
+        //body -> father -> son
+        /* var son = document.querySelector('.son');
+        son.addEventListener('click',function(){
+            alert('son')
+        }, true); */
+
+        /* var father = document.querySelector('.father');
+        father.addEventListener('click',function(){
+            alert('father')
+        }, true); */
+        //處於捕獲階段，因為先捕獲father，因此先彈出father警示框，再彈出son
+
+        //4. 冒泡階段 如果addEventListener 第三個參數是 false 或者省略 那就是處於冒泡階段
+        //son -> father -> body -> html
+
+        var son = document.querySelector('.son');
+        son.addEventListener('click',function(){
+            alert('son')
+        }, );
+
+        var father = document.querySelector('.father');
+        father.addEventListener('click',function(){
+            alert('father')
+        }, );
+        //處於冒泡階段 先彈出son 再彈出father
+
+        //實際開發中更關注事件冒泡
+        //某些事件是沒有冒泡的 例如onblur onfocus
+        
+
+    
+
+
+
+        
+    </script>
+</body>
+</html>

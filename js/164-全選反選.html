@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .wrap {
+        width: 300px;
+        margin: 100px auto 0;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #c0c0c0;
+        width: 300px;
+    }
+    
+    th,
+    td {
+        border: 1px solid #d0d0d0;
+        color: #404060;
+        padding: 10px;
+    }
+    
+    th {
+        background-color: #09c;
+        font: bold 16px "微软雅黑";
+        color: #fff;
+    }
+    
+    td {
+        font: 14px "微软雅黑";
+    }
+    
+    tbody tr {
+        background-color: #f0f0f0;
+    }
+    
+    tbody tr:hover {
+        cursor: pointer;
+        background-color: #fafafa;
+    }
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <table>
+            <thead>
+                <th><input type="checkbox" name="" id="j_cbAll"></th>
+                <th>product</th>
+                <th>price</th>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Apple</td>
+                    <td>HK$10</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Peach</td>
+                    <td>HK$20</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Banana</td>
+                    <td>HK$5</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Pear</td>
+                    <td>HK$30</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Lychee</td>
+                    <td>HK$40</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var j_cbAll = document.getElementById('j_cbAll');
+        var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');
+        j_cbAll.onclick = function() {
+                // this.checked 它可以得到当前复选框的选中状态如果是true 就是选中，如果是false 就是未选中
+               /*  console.log(this.checked); */
+                for (var i = 0; i < j_tbs.length; i++) {
+                    j_tbs[i].checked = this.checked;
+                }
+            }
+            for (var i = 0; i < j_tbs.length; i++) {
+            j_tbs[i].onclick = function() {
+                  // flag 控制全选按钮是否选中
+                  var flag = true;
+                //先遍歷一遍是否全部副選項都被選中，
+                for(var i = 0; i < j_tbs.length;i++) {
+                    //!j_tbs[i].checked = false
+                    if(j_tbs[i].checked == false) {
+                    //循環過程中發現有checked是未選中的時候。flag就變為false，全選的checked狀態就會變為false，如果循環過程中，所有選項都被選中，if 不觸發，flag維持為true
+                        flag = false;   
+                        break; //退出for循環，提高運行效率，因只要有一個未選中，剩下的無需循環
+                    }                
+                }
+                j_cbAll.checked = flag;
+            }
+            }
+        
+    
+    </script>
+</body>
+</html>

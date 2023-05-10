@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 求1 - 100之間所有數的平均值
+        var sum = 0;
+        var average = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum = (sum + i) 
+        }
+        average = sum / 100;
+        console.log(average);
+
+        //2. 求1 - 100 之間所有偶數 和 技術的和
+        var odd = 0;
+        var even = 0;
+        for (var i = 1; i <= 100; i++){
+            if (i % 2 > 0) {
+                odd = odd + i;
+            } else {
+                even = even + i;
+            }
+            
+        }
+        console.log(odd);
+        console.log(even);
+
+        //3. 求 1 - 100 之間所有能被三整除的數字的和
+
+        var num = 0;
+        for(var i = 1; i <= 100; i++){
+            if (i % 3 == 0) {
+                num = num + i
+            }
+        }
+        console.log(num);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

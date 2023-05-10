@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click</button>
+    <p>abc</p>
+    <div class="inner"></div>
+    <div class="create"></div>
+    <script>
+        //頁面加載完畢 再調用這句代碼，會導致頁面重繪
+        //window.onload = function () {    
+        //document.write('<div>123</div>')
+        //}
+        //1. document.write 
+        //會導致頁面重繪
+        /* var btn = document.querySelector('button')
+        btn.onclick = function(){
+        document.write('<div>123</div>')} */
+
+        //2. innerHTML //若運用了拼接字符串的形式來創建多個元素，效率最慢
+        var inner = document.querySelector('.inner');
+       /*  for(var i = 0 ; i <= 100; i++){
+        inner.innerHTML += "<a href='#'>百度</a>"
+        }  */
+
+        //若先生成一個數組，把要生成的元素放在數組中，再把數組賦值給innerHtml中。效率最高
+
+        var arr = [];
+        for(var i = 0; i <= 100; i++){
+           arr.push("<a href='#'>百度</a>") 
+        }
+        inner.innerHTML = arr.join('')
+
+
+
+
+        // document.createElement 效率較高，結構清晰，但較以數組方式的innerHTML慢
+        var create = document.querySelector('.create');
+        for(var i = 0 ; i <= 100; i++){
+        var a = document.createElement('a');
+        create.appendChild(a)
+        }
+
+
+
+    </script>
+</body>
+</html>

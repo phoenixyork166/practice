@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click</button>
+    <script>
+        var btn = document.querySelector('button')
+        btn.addEventListener('click',function(){
+            //assign能記錄瀏覽歷史可回退到原來頁面
+            //location.assign('http://google.com.hk');
+            //replace不記錄瀏覽歷史，不能回退到上一個頁面
+            //location.replace('http://google.com.hk')
+            //reload 刷新頁面 如想強制刷新,括號中加true
+            location.reload(true)
+        })
+    </script>
+</body>
+</html>

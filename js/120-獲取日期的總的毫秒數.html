@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //date對象是基於1970年1月1日（世界標準時間）起的毫秒數
+        //獲得Date總的毫秒數(時間戳) 不是當前時間的毫秒數。而是距離1970年1月1日過了多少毫秒數
+        //1.通過 valueOf() getTime()
+        var date = new Date()
+        console.log(date.valueOf());//1660827592244
+        console.log(date.getTime()); //1660827592244//距離1970年的1月1日的總毫秒數1660827592244
+        //
+        //簡單寫法(常用寫法)
+        var date1 = + new Date(); // +new Date返回的就是總的毫秒數
+        console.log(date1); //1660828352050
+        //方法三 H5 新增方法
+        console.log(Date.now()); //1660828417780
+        
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

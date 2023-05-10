@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        td,
+        th {
+            border: 1px solid #333;
+        }
+        
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+               
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+                <th>複製</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        //1.準備學生數據
+        var datas = [
+             {
+            name : '糯米糍',
+            subject: '天竺鼠車車',
+            score: 980
+            },
+            {
+            name : 'B女',
+            subject: '天竺鼠車車',
+            score: 688
+            },
+            {
+            name : '羊啤啤',
+            subject: '天竺鼠車車',
+            score: 1020
+            },
+            {
+            name : '白糖糕',
+            subject: '天竺鼠車車',
+            score: 1140
+            },      
+         ];
+        //2. tbody創建行 根據對象多少創建相應行數
+        var tbody = document.querySelector('tbody');
+        for(var i = 0; i < datas.length; i++){
+            //1.創建tr行 
+            var tr = document.createElement('tr')
+            tbody.appendChild(tr);
+            //2.行裡面創建單元格td 取決於屬性多少
+            for(var k in datas[i]){
+                //var k in obj 取得屬性
+                //遍歷對象中的屬性，每一個屬性創建一個單元格
+                var td = document.createElement('td');
+                //把屬性值賦值到td obj[k] 得到屬性值
+                td.innerHTML = datas[i][k];
+                tr.appendChild(td)
+            }
+            //3.創建刪除單元格
+            var td = document.createElement('td')
+            td.innerHTML = "<a href = 'javascript:;'>刪除</a>"
+            tr.appendChild(td)
+            //4. 刪除操作
+            var as = document.querySelectorAll('a')
+            for(var j = 0; j < as.length; j++){
+                as[j].onclick = function(){
+                    //a的parentNode是tr tr的parentNode是tbody，要透過操作tbody才能刪除a對應的tr
+                    tbody.removeChild(this.parentNode.parentNode)
+                }
+            }
+            //5. 複製單元格
+            var td = document.createElement('td')
+            td.innerHTML = "<a class = 'copy' href = 'javascript:;'>複製</a>"
+            tr.appendChild(td)
+
+            var copy = document.querySelectorAll('.copy')
+            for (let i = 0; i < copy.length; i++) {
+               copy[i].onclick = function(){
+                //創建複製的節點
+                var lili = this.parentNode.parentNode.cloneNode(true);
+                //把複製節點放置在當前複製鏈接對應的td上
+                tbody.insertBefore(lili,this.parentNode.parentNode)
+
+               }
+                
+            }
+            }
+
+
+
+        
+
+    </script>
+</body>
+</html>

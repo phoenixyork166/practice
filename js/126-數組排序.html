@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //數組排序
+        //1. 翻轉數組 
+        var array = ['pink', 'blur', 'red']
+        array.reverse();
+        console.log(array);
+
+        //2. 數組排序(冒泡排序)
+        var arr1 = [33,7,5,41,1];
+        arr1.sort(function (a, b){
+            return a - b; //按照升序排列
+            // return b - a 按照降序排列
+
+        });
+        console.log(arr1); //[1, 5, 7, 33, 41]
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

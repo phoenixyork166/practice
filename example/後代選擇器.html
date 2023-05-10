@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後代選擇器</title>
+    <style>
+        /* 想把ol裡面的li選出改為粉紅色 */
+        /* 父元素（空格） 子/孫元素{樣式生命} */
+        /* 元素一 元素二可用任何基礎選擇器 */
+        ol li {
+            color: palevioletred;
+        }
+
+        ol li a {
+            color: purple;
+        }
+
+        .nav li {
+            color: blue;
+        }
+
+        ul .li3 {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">空鏈接</a></li>
+    </ol>
+    <ul>
+        <li>我是ul的孩子1</li>
+        <li>我是ul的孩子2</li>
+        <li class="li3">我是ul的孩子3</li>
+        <li>我是ul的孩子3</li>
+        <li>我是ul的孩子3</li>
+    </ul>
+    <ul class="nav">
+        <li>我是ul的孩子1</li>
+        <li>我是ul的孩子2</li>
+        <li>我是ul的孩子3</li>
+        <li>我是ul的孩子3</li>
+        <li>我是ul的孩子3</li>
+    </ul>
+
+
+</body>
+
+</html>

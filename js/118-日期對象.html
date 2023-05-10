@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.Date() 日期對象 是一個構造函數 必須使用new來調用創建對象
+        var obj = new Object();//創建一個對象實例
+        //使用date
+        var date = new Date();
+        //如果()中沒有參數，就返回當前系統的當前時間
+        console.log(date);//Wed Aug 17 2022 20:49:08 GMT+0800 (China Standard Time)
+        
+        //2. 參數常用的寫法 數字型 2022,08,17 或者 字符串 '2022-08-17 21:04:08'
+        
+        var date1 = new Date(2022,09,17) //返回的是 2022年10月17日
+        console.log(date1);
+        var date2 = new Date('2022-08-17 21:04:08');
+        console.log(date2);//Wed Aug 17 2022 21:04:08 GMT+0800 (China Standard Time)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

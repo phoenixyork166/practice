@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 雙重for循環 語法結構
+        /* for(外層的初始化變量; 外層的條件表達式; 外層的操作表達式){
+            for(裡層的初始化變量; 裡層的條件表達式; 裡層的操作表達式){
+                //執行語句
+            }
+        } */
+        //2. 可以把裡面的循環看成是外層循環的執行語句
+
+        //3. 外層循環循環一次，裡面的循環執行全部
+
+
+        for(var i = 1; i <= 3; i++){
+            console.log('this is outside'+ i + 'time');
+            for(var j = 1; j <= 3; j++){
+                console.log('this is inside '+ j + 'time');
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // arguments的使用 !只有函數才有arguments這個對象 而且每個函數都內置arguments
+        function fn() {
+            console.log(arguments); 
+            console.log(arguments.length);//3
+            console.log(arguments[2]); //3
+            //我們可以按照數組的方式遍歷argument
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+                
+            }
+            //裡面存儲了所有傳遞過來的實參 
+            //arguments 是偽數組
+            //1. 具有數組的length屬性
+            //2. 按照索引的方式進行存儲
+            //3. 不具有真正數組的一些方法，例如pop，push
+        }
+        fn(1, 2, 3)
+        fn(1, 2, 3, 4, 5)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

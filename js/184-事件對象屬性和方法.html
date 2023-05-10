@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+    <ul>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+    </ul>
+    <script>
+        //常見事件對象的屬性和方法
+        //1.e.target返回的是觸發事件的對象
+        //2. this返回的是綁定事件的對象
+        //3. e.target是 點擊了哪個元素 就返回該元素 this 哪個元素綁定了事件 就返回哪個
+        var div = document.querySelector('div');
+        div.addEventListener('click', function(e){
+           console.log(e.target); 
+        }) //<div>123</div>
+
+        var ul = document.querySelector('ul')
+        ul.addEventListener('click', function(e){
+            //給ul綁定了事件，this指向ul
+            console.log(this);
+            //ul
+            console.log(e.currentTarget);//ul
+            //觸發事件（點擊）的是li 因此e.target指向的是li
+            console.log(e.target);//li
+        })
+
+    //了解兼容性
+/*         div.onclick = function(e){
+            e = e|| window.event;
+            var target = e.target || e.srcElement;
+            console.log(target);
+        } */
+
+
+        //2. 了解跟this非常相似的屬性 currentTarget
+
+
+    </script>
+    
+</body>
+</html>

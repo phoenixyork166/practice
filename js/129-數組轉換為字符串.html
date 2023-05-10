@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //數組轉換為字符串
+        //1. toString() 
+        var array = [1, 2, 3]
+        console.log(array.toString()); //1,2,3
+        //2. join(分隔符)
+        var array1 = ['green', 'pink', 'yellow']
+        console.log(array1.join('/')); //green/pink/yellow
+
+        //concat() 連接兩個或者多個數組 不影響原數組 返回一個新的數組
+        array3 = array.concat(array1)
+        console.log(array3); //[1, 2, 3, 'green', 'pink', 'yellow']
+
+        //slice() 數組截取slice(begin,end)  返回被截取項目的新數組 返回的數組中不包括end的元素 不影響原數組
+        console.log(array3.slice(2));
+        //[3, 'green', 'pink', 'yellow'] 從索引號為2的數組元素開始截取
+        console.log(array3.slice(2,5));//3, 'green', 'pink' 從索引號為2的數組開始截取，截取到索引號為4的數組
+        var array4 = array3.slice(1, 4)
+        console.log(array4); //2, 3, 'green'
+
+        //splice(start，deleteCount,added item) 
+        //start 若索引大於array.length，則實際開始的索引值會設為陣列長度，若索引為負，則從陣列最後一個元素開始往前改動，若其絕對值大於數組長度，則被設為0
+        //deleteCount(選擇性) 若省略deletecount或其值大於數組長度，則所有從start開始到陣列中最後一個元素都會被刪除，若為0或者負數，則不會有元素被刪除，並只至少加入一個新元素
+        //items，從start開始，加入陣列的元素，若為指定任何元素，則只會依照start和deleteCount刪除元素
+        //返回值為被刪除的元素
+        console.log(array3.splice(1,2)); //2,3
+        console.log(array3); //[1, 'green', 'pink', 'yellow']
+        console.log(array3.splice(1,0,'orange'));//[] 因為沒有刪除元素，因此返回值是空
+        console.log(array3);//[1, 'orange', 'green', 'pink', 'yellow']
+
+
+
+       
+        
+        
+
+
+
+
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

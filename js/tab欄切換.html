@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        .tab {
+            width: 978px;
+            margin: 100px auto;
+        }
+        
+        .tab_list {
+            height: 39px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        
+        .tab_list li {
+            float: left;
+            height: 39px;
+            line-height: 39px;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .tab_list .current {
+            background-color: #c81623;
+            color: #fff;
+        }
+        
+        .item_info {
+            padding: 20px 0 0 20px;
+        }
+        
+        .item {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">商品介紹</li>
+                <li>規格和包裝</li>
+                <li>售後保障</li>
+                <li>商品評價</li>
+                <li>手機社區</li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display:block">
+                商品介绍模块内容
+            </div>
+            <div class="item">
+                规格与包装模块内容
+            </div>
+            <div class="item">
+                售后保障模块内容
+            </div>
+            <div class="item">
+                商品评价（50000）模块内容
+            </div>
+            <div class="item">
+                手机社区模块内容
+            </div>
+        </div>
+    </div>
+    <script>
+        var tab_list = document.querySelector('.tab_list').querySelectorAll('li')
+        var item = document.querySelectorAll('.item')
+        //為每一個tab_list綁定事件
+        for(var i = 0; i < tab_list.length; i++){
+            //為list添加index屬性，方便之後根據list，顯示對應的item
+            tab_list[i].setAttribute('index',i);
+            //添加事件處理程序
+            tab_list[i].onclick = function () {
+               //1. 為選定的list添加底色(運用排他算法，先去除所有底色，再為選定的添加底色) 
+              for(var i = 0; i < tab_list.length; i++){
+                tab_list[i].className = ''
+              }                        
+              this.className = 'current';
+
+            //提取index屬性的數值 list的index屬性值應與對應的item數列的索引號一致
+            var index = this.getAttribute('index');
+            //排他算法
+            for(i = 0; i < item.length; i++){
+                item[i].style.display = 'none'
+            }
+            //為對應的item添加display屬性
+            item[index].style.display = 'block';
+            } 
+        }
+        
+
+    
+        
+    </script>
+</body>
+</html>

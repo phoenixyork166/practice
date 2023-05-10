@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>515151</li>
+        <li>515151</li>
+        <li>515151</li>
+        <li>515151</li>
+        <li>515151</li>
+    </ul>
+    <script>
+        //事件委託的核心原理：給父節點添加偵聽器，利用事件冒泡影響每一個子節點
+        var ul = document.querySelector('ul');
+        var lis = document.querySelectorAll('li')
+        ul.addEventListener('click', function(e){
+            alert('515151')
+           for (var i = 0; i < ul.children.length; i++) {
+            ul.children[i].style.backgroundColor = '' 
+           }
+            e.target.style.backgroundColor = 'pink';
+        })
+    </script>
+</body>
+</html>

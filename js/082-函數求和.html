@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 利用函數求任意兩個數的和
+        function plus(num1,num2) {
+            console.log(num1 + num2);
+        }
+       plus(20, 60);
+       //2. 利用函數求任意兩個數之間的和
+       function sum(num1,num2) {
+           var sum = 0;
+           for(var i = num1; i <= num2; i++) {
+               sum += i;
+           }
+           console.log(sum);
+           }
+       sum(5,10);
+       //3. 注意點
+       //(1) 多個參數之間用逗號隔開
+       //(2) 形參可以看做不用聲明的變量
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
